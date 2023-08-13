@@ -1,10 +1,7 @@
-import NewUserChecklist from '@/components/dashboard/NewUserChecklist';
 import React from 'react';
 
-const Dashboard = () => {
-  return (
-      <NewUserChecklist />
-  );
+const DashboardPage = () => {
+  return <div>DashboardPage</div>;
 };
 
-export default Dashboard;
+export default DashboardPage;

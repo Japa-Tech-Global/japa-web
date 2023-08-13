@@ -6,12 +6,10 @@ function TableBody({
   data,
   tableHeaders,
   menuItems,
-  tableAction,
 }: {
   data: any[];
   tableHeaders: string[];
   menuItems?: menuItemType[];
-  tableAction?: (data: any) => void;
 }) {
   const tableRows: rowType = React.useMemo(
     () =>
@@ -26,16 +24,14 @@ function TableBody({
 
   return (
     <tbody className='[&>*:last-child]:border-none border'>
-      {tableRows.map(({ row }, mainIndex) => (
-        <tr key={mainIndex} className='border-b hover:bg-[#F4F5F6] duration-300'>
+      {tableRows.map(({ row }, index) => (
+        <tr key={index} className='border-b hover:bg-[#F4F5F6] duration-300'>
           {row.map((item, index) => (
             <td className='px-3 py-3' key={index}>
               {formatTableValue({
                 value: item.value,
                 headerName: item.headerName,
                 menuItems,
-                tableAction,
-                data: data[mainIndex],
               })}
             </td>
           ))}

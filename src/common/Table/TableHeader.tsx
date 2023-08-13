@@ -11,9 +11,7 @@ function TableHeader({ tableHeaders }: { tableHeaders: string[] }) {
               {header?.replace(/([a-z])([A-Z])/g, '$1 $2')?.toLowerCase()}
             </th>
           ) : (
-            <th className='px-3 py-3' scope='col' key={header}>
-              Change
-            </th>
+            <th className='px-3 py-3' scope='col' key={header}></th>
           )
         )}
       </tr>

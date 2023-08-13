@@ -1,54 +1,5 @@
 .hero-bg {
-  background-image: url(../assets/images/home/hero.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.home-biller-bg {
-  background-image: url(../assets/images/home/map.svg), url(../assets/images/common/ellipse.svg);
-  background-repeat: no-repeat, no-repeat;
-  background-size: contain, auto;
-  background-position: center 269px, left 161px;
-}
-
-.about-header-bg {
-  background-image: url(../assets/images/home/about-bg.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.left-eclipse-bg {
-  background-image: url(../assets/images/common/ellipse.svg);
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: left top;
-}
-
-.right-eclipse-bg {
-  background-image: url(../assets/images/common/ellipse-big.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 90vw 232px;
-}
-
-.combined-eclipse-bg {
-  background-image: url(../assets/images/common/ellipse.svg), url(../assets/images/common/ellipse-big.svg);
-  background-repeat: no-repeat, no-repeat;
-  background-size: auto, auto;
-  background-position: left top, 90vw bottom;
-}
-
-.contact-header-bg {
-  background-image: url(../assets/images/home/contact-bg.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.billers-header-bg {
-  background-image: url(../assets/images/home/billers-bg.webp);
+  /* background-image: url(../assets/images/home/hero.webp); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

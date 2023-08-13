@@ -14,11 +14,3 @@ export const getNameInitials = (name: string) => {
 export const splitCamelCase = (str: string) => {
   return str.replace(/([a-z])([A-Z])/g, '$1 $2');
 };
-
-export const getCatchMessage = (error: any) => {
-  return error?.response?.data
-    ? Object.values(error?.response?.data).length
-      ? Object.values(error?.response?.data).join(', ')
-      : error?.response?.data?.message
-    : 'Request Unsuccessful';
-};

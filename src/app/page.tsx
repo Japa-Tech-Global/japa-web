@@ -1,21 +1,18 @@
-import BillerSection from '@/components/home/BillerSection/BillerSection';
-import HeroSection from '@/components/home/HeroSection';
-import TestimonialSection from '@/components/home/TestimonialSection';
-import AppLayout from '@/components/layout/AppLayout';
-// import { useAppSelector } from '@/store/hooks';
-// import { useGetUsersQuery } from '@/store/services/userApi';
+import Button from '@/common/Button/Button';
+import Link from 'next/link';
 
-export default function Home() {
-  // const { value } = useAppSelector((state) => state.counter);
-
-  // const { isLoading, isFetching, data, error } = useGetUsersQuery(null);
-
-  // console.log(data);
+export default function HomePage() {
   return (
-    <AppLayout>
-      <HeroSection />
-      <BillerSection />
-      <TestimonialSection />
-    </AppLayout>
+    <main className='flex flex-col h-screen w-screen gap-5 items-center justify-center'>
+      <h1>Hi, Welcome to Brand</h1>
+      <div className='flex items-center justify-center gap-3'>
+        <Link href='/auth/login'>
+          <Button>Login</Button>
+        </Link>
+        <Link href='/auth/register'>
+          <Button>Register</Button>
+        </Link>
+      </div>
+    </main>
   );
 }

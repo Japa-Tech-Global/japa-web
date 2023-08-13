@@ -4,7 +4,7 @@ import TableHeader from './TableHeader';
 import TableBody from './TableBody';
 import Pagination from './Pagination';
 
-function Table({ loading, tableHeaders, data, menuItems, tableAction }: TableProps) {
+function Table({ loading, tableHeaders, data, menuItems }: TableProps) {
   return (
     <div className='overflow-x-auto w-full'>
       {loading ? (
@@ -13,14 +13,9 @@ function Table({ loading, tableHeaders, data, menuItems, tableAction }: TablePro
         </div>
       ) : data && data.length ? (
         <>
-          <table className='w-full text-center bg-white'>
+          <table className='w-full text-left bg-white'>
             <TableHeader tableHeaders={tableHeaders} />
-            <TableBody
-              data={data}
-              tableHeaders={tableHeaders}
-              menuItems={menuItems}
-              tableAction={tableAction}
-            />
+            <TableBody data={data} tableHeaders={tableHeaders} menuItems={menuItems} />
           </table>
           <Pagination />
         </>

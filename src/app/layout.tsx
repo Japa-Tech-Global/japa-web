@@ -1,22 +1,24 @@
-import './globals.css';
 import { Providers } from '@/store/provider';
-import { Metadata } from 'next';
-import FeedbackModal from '@/common/FeedbackModal';
+import './globals.css';
+import type { Metadata } from 'next';
+import ToastProvider from '@/common/ToastProvider';
+import 'react-toastify/dist/ReactToastify.css';
+import 'reactjs-popup/dist/index.css';
+import { SFPro } from './fonts';
 
 export const metadata: Metadata = {
-  title: 'Afripie',
-  description: 'Say Hello To Your One Stop Utility Solutions',
+  title: 'Brand',
+  description: 'Brand Description',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body>
+      <body className={SFPro.className}>
         <Providers>
-          {children}
-          <div id='modals' />
-          <FeedbackModal />
+          <ToastProvider>{children}</ToastProvider>
         </Providers>
+        <div id='modals' />
       </body>
     </html>
   );

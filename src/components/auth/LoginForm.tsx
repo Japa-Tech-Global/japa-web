@@ -1,28 +1,24 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
-import Link from 'next/link';
-import Button from '@/common/Button/Button';
-import LabelInput from '@/common/LabelInput';
-import RecaptchaContainer from '@/common/RecaptchaContainer';
-import axios from 'axios';
-import { appAxios } from '@/api/axios';
 import { useAppDispatch } from '@/store/hooks';
-import { openFeedback } from '@/store/features/feedback';
-import { updateUser } from '@/store/features/user';
 import { useRouter } from 'next/navigation';
+import LabelInput from '@/common/LabelInput';
+import Button from '@/common/Button/Button';
+import Link from 'next/link';
+import { appAxios } from '@/api/axios';
+import { updateToken } from '@/store/features/user';
+import { sendCatchFeedback, sendFeedback } from '@/functions/feedback';
 
 const LoginForm = () => {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
   const dispatch = useAppDispatch();
   const router = useRouter();
+  const [loading, setLoading] = React.useState(false);
+
   const formik = useFormik({
     initialValues: {
-      recaptcha: '',
-      verifiedRecaptcha: false,
       email: '',
       password: '',
     },
@@ -30,97 +26,65 @@ const LoginForm = () => {
       submitValues();
     },
     validationSchema: yup.object({
-      recaptcha: yup.string().required('Recaptcha is required'),
-      email: yup.string().required('Required'),
-      password: yup.string().required('Required'),
+      email: yup.string().email('Enter a valid email').required('Email is required'),
+      password: yup.string().required('Password is required'),
     }),
-    enableReinitialize: true,
   });
-
   const submitValues = async () => {
-    formik.setFieldTouched('recaptcha', true);
-    try {
-      setLoading(true);
-      if (!formik.values.verifiedRecaptcha) {
-        // Check if verification isn't done so duplicate check is avoided
-        await axios.post('/api/recaptcha', {
-          code: formik.values.recaptcha,
-        });
-        formik.setFieldValue('verifiedRecaptcha', true);
-      }
+    // try {
+    //   setLoading(true);
+    //   const response = await appAxios.post('/auth/login', {
+    //     email: formik.values.email,
+    //     password: formik.values.password,
+    //   });
+    //   const userToken = response.data?.data;
+    //   dispatch(updateToken({ token: userToken }));
+    //   // if (!userObject.isVerified) {
+    //   //   // Send verification code
+    //   //   sendFeedback('Verify your account to continue', 'info');
+    //   //   await appAxios.post('/auth/resend-code');
+    //   //   return router.push('/auth/verify-email');
+    //   // }
 
-      const response = await appAxios.post('/auth/login', {
-        email: formik.values.email,
-        password: formik.values.password,
-      });
-      dispatch(updateUser({ user: response.data }));
-
-      router.push('/dashboard');
-      formik.resetForm();
-    } catch (error: any) {
-      setError(error?.response?.data?.message || 'Request unsuccessful');
-      dispatch(
-        openFeedback({
-          type: 'error',
-          actionText: 'Try Again',
-          message: error?.response?.data?.message || 'Request unsuccessful',
-        })
-      );
-    } finally {
-      setLoading(false);
-    }
+    //   sendFeedback(response.data?.message, 'success');
+    //   formik.resetForm();
+    //   return router.push('/dashboard');
+    // } catch (error: any) {
+    //   sendCatchFeedback(error);
+    // } finally {
+    //   setLoading(false);
+    // }
+    return router.push('/dashboard');
   };
-  return (
-    <form
-      className='flex flex-col w-full md:max-w-[70%] mx-auto'
-      onSubmit={formik.handleSubmit}
-    >
-      {error && <p className='mb-5 text-center text-error'>{error}</p>}
-      <LabelInput
-        formik={formik}
-        name='email'
-        placeholder='Email Address'
-        required
-        type='email'
-        className='mb-[43px]'
-      />
-      <LabelInput
-        formik={formik}
-        name='password'
-        required
-        type='password'
-        placeholder='*********'
-      />
 
-      <Link href='/forgot-password' className='text-primary self-end text-xs mt-1'>
-        Forgot Password?
-      </Link>
-      <RecaptchaContainer
-        onChange={(value) => {
-          formik.setFieldValue('recaptcha', value);
-          if (!value) {
-            formik.setFieldValue('verifiedRecaptcha', false);
-          }
-        }}
-        showError={formik.touched.recaptcha && formik.errors.recaptcha ? true : false}
-        error={formik.errors.recaptcha}
-        containerClass='mb-[22px] w-full max-w-full overflow-auto flex items-center mt-[29px] flex-col'
-      />
-      <Button
-        type='submit'
-        loading={loading}
-        disabled={Object.keys(formik.errors).length > 0}
-        className='mt-[52px]'
-      >
-        Login
-      </Button>
-      <p className='mt-3'>
-        Don’t have an AfriPie account yet?{' '}
-        <Link href='/register' className='text-primary'>
+  return (
+    <>
+      <h1 className='font-semibold text-2xl md:text-[32px] mb-1'>Welcome back</h1>
+      <div className='mb-10 text-[#A0ABBB] font-medium'>
+        Don&apos;t have an account?{' '}
+        <Link href='/auth/register' className=' text-primary'>
           Sign up
         </Link>
-      </p>
-    </form>
+      </div>
+      <form onSubmit={formik.handleSubmit} className='w-full '>
+        <LabelInput
+          formik={formik}
+          name='email'
+          label='Email'
+          type='email'
+          className='mb-8'
+        />
+        <LabelInput formik={formik} name='password' label='Password' type='password' />
+        <div className='mb-10 mt-[5px] text-right'>
+          <Link href='/auth/forgot-password' className=' text-primary'>
+            Forgot Password?
+          </Link>
+        </div>
+        <Button type='submit' loading={loading} className='w-full'>
+          Log in
+        </Button>
+      </form>
+    </>
   );
 };
 

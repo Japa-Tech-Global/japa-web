@@ -5,7 +5,6 @@ export interface TableProps {
   tableHeaders: string[];
   loading: boolean;
   menuItems?: menuItemType[];
-  tableAction?: (data: any) => void;
 }
 
 export type rowType = { row: { value: string; headerName: string }[] }[];

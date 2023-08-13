@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useCallback } from 'react';
+import CheckIcon from '@/assets/icons/auth/checkbox.svg';
+import Image from 'next/image';
 
 const PasswordRules = ({
   password,
@@ -35,16 +37,20 @@ const PasswordRules = ({
   );
 
   return (
-    <div className={'flex flex-col gap-2 ' + className}>
+    <div className={'grid grid-cols-1 md:grid-cols-2 gap-2 ' + className}>
       {checks.map((check) => (
         <div key={check.label} className='flex items-center gap-2'>
-          <div
-            className='w-[9px] h-[9px] rounded-full'
-            style={{
-              backgroundColor: runCheck(check.condition) ? '#8000D7' : '#D3D4D8',
-            }}
-          />
-          <span className='text-[10px]'>{check.label}</span>
+          {runCheck(check.condition) ? (
+            <>
+              <Image className='w-4 h-4' src={CheckIcon} alt='Done' />
+              <span className='text-[12px] text-success'>{check.label}</span>
+            </>
+          ) : (
+            <>
+              <div className='w-4 h-4 rounded-full border border-[#A0ABBB] bg-white' />
+              <span className='text-[12px] text-[#A0ABBB]'>{check.label}</span>
+            </>
+          )}
         </div>
       ))}
     </div>

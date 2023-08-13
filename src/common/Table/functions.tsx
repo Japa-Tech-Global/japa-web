@@ -1,5 +1,3 @@
-import { UncertainObjectType } from '@/types/user';
-import Button from '../Button/Button';
 import TableMenu from './TableMenu';
 import { menuItemType } from './types';
 
@@ -7,14 +5,10 @@ export const formatTableValue = ({
   value,
   headerName,
   menuItems,
-  tableAction,
-  data,
 }: {
   value: string;
   headerName: string;
-  tableAction?: (data: any) => void;
   menuItems?: menuItemType[];
-  data: UncertainObjectType;
 }) => {
   // Boolean Check
   if (typeof value === 'boolean') {
@@ -43,31 +37,16 @@ export const formatTableValue = ({
 
   // Status Check
   if (headerName === 'status') {
-    let output = <span className='capitalize text-success'>{value}</span>;
-    if (!value) {
-      output = <span>-</span>;
-    }
-    return output;
-    // return value === 'open' ? (
-    //   <span className='capitalize text-success'>{value}</span>
-    // ) : (
-    //   <span className='capitalize text-error'>{value || '-'}</span>
-    // );
+    return value === 'open' ? (
+      <span className='capitalize text-success'>{value}</span>
+    ) : (
+      <span className='capitalize text-error'>{value}</span>
+    );
   }
 
   // Menu ID check
-  if (headerName === 'action' && tableAction) {
-    return (
-      <div className='flex justify-center'>
-        <Button
-          className='!w-fit !bg-[#8000D738] !text-black !h-8'
-          onClick={() => tableAction(data)}
-        >
-          Edit
-        </Button>
-      </div>
-    );
-    // return <TableMenu id={value} menuItems={menuItems} />;
+  if (headerName === '_id') {
+    return <TableMenu id={value} menuItems={menuItems} />;
   }
 
   return <span className='capitalize'>{value || '-'}</span>;
