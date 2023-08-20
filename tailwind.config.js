@@ -9,16 +9,16 @@ module.exports = {
   theme: {
     extend: {
       textColor: {
-        primary: '#1D4ED8',
-        success: '#059669',
-        secondary: '#F3EDFC',
-        error: '#EB4335',
+        primary: '#7D30EE',
+        success: '#25AD25',
+        secondary: '#FFBD17',
+        error: '#FF0606',
       },
       backgroundColor: {
-        primary: '#1D4ED8',
-        success: '#059669',
-        secondary: '#F3EDFC',
-        error: '#EB4335',
+        primary: '#7D30EE',
+        secondary: '#FFBD17',
+        error: '#FF0606',
+        grey: '#DEDCDC',
       },
       borderColor: {},
       fontFamily: {
@@ -31,9 +31,9 @@ module.exports = {
         main: 'calc(100vh - 72px)',
       },
       outlineColor: {
-        primary: '#1D4ED8',
+        primary: '#7D30EE',
       },
     },
   },
   plugins: [],
-}
+};

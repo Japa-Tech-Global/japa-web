@@ -4,17 +4,23 @@ import type { Metadata } from 'next';
 import ToastProvider from '@/common/ToastProvider';
 import 'react-toastify/dist/ReactToastify.css';
 import 'reactjs-popup/dist/index.css';
-import { SFPro } from './fonts';
+import { Poppins } from 'next/font/google';
 
 export const metadata: Metadata = {
-  title: 'Brand',
-  description: 'Brand Description',
+  title: 'JAPA',
+  description: 'JAPA Description',
 };
+
+const poppins = Poppins({
+  variable: '--font-primary',
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+});
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body className={SFPro.className}>
+      <body className={poppins.className}>
         <Providers>
           <ToastProvider>{children}</ToastProvider>
         </Providers>

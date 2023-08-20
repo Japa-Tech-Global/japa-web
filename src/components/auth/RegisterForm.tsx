@@ -116,7 +116,7 @@ const RegisterForm = () => {
               <Link href='/terms' target='_blank' className='text-primary'>
                 Terms and Conditions
               </Link>{' '}
-              of Brand
+              of Japa
             </span>
           }
           style={{
