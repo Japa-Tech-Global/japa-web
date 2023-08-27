@@ -1,18 +1,19 @@
-import Button from '@/common/Button/Button';
-import Link from 'next/link';
+import BenefitSection from '@/components/home/Benefit/BenefitSection';
+import Hero from '@/components/home/Hero';
+import JourneySection from '@/components/home/JourneySection';
+import TestimonialSection from '@/components/home/Testimonial/TestimonialSection';
+import UpskillSection from '@/components/home/UpskillSection';
+import Footer from '@/components/layout/Footer';
 
 export default function HomePage() {
   return (
-    <main className='flex flex-col h-screen w-screen gap-5 items-center justify-center'>
-      <h1>Hi, Welcome to Japa</h1>
-      <div className='flex items-center justify-center gap-3'>
-        <Link href='/auth/login'>
-          <Button>Login</Button>
-        </Link>
-        <Link href='/auth/register'>
-          <Button>Register</Button>
-        </Link>
-      </div>
+    <main>
+      <Hero />
+      <UpskillSection />
+      <JourneySection />
+      <BenefitSection />
+      <TestimonialSection />
+      <Footer />
     </main>
   );
 }
