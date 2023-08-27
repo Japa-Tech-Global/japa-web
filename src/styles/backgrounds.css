@@ -1,6 +1,13 @@
 .hero-bg {
-  /* background-image: url(../assets/images/home/hero.webp); */
+  background-image: url(../assets/backgrounds/hero.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
   background-position: center;
+}
+
+.benefit-bg {
+  background-image: url(../assets/backgrounds/benefits.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: bottom;
 }

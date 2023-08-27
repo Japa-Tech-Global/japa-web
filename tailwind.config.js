@@ -20,7 +20,9 @@ module.exports = {
         error: '#FF0606',
         grey: '#DEDCDC',
       },
-      borderColor: {},
+      borderColor: {
+        primary: '#7D30EE',
+      },
       fontFamily: {
         primary: ['var(--font-primary)'],
       },
