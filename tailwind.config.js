@@ -27,7 +27,7 @@ module.exports = {
         primary: ['var(--font-primary)'],
       },
       padding: {
-        primary: '5vw',
+        primary: '3vw',
       },
       minHeight: {
         main: 'calc(100vh - 72px)',

@@ -3,8 +3,7 @@ import Image1 from '@/assets/images/home/journey1.webp';
 import Image2 from '@/assets/images/home/journey2.webp';
 import Image3 from '@/assets/images/home/journey3.webp';
 import Image from 'next/image';
-import Link from 'next/link';
-import Button from '@/common/Button/Button';
+import WatchVideoButton from '@/common/WatchVideoButton';
 
 const JourneySection = () => {
   return (
@@ -24,12 +23,10 @@ const JourneySection = () => {
             Access training, professional CV templates, exclusive global remote job
             opportunities, and a supportive African community
           </p>
-          <p className='md:text-2xl'>
+          <p className='md:text-2xl mb-5'>
             Thrive anywhere and showcase the excellence of Africa!
           </p>
-          <Link href='/auth/register' className='mt-5'>
-            <Button>Get Started</Button>
-          </Link>
+          <WatchVideoButton />
         </div>
       </div>
       <div className='flex mt-[99px] flex-wrap md:flex-nowrap gap-5 md:gap-0'>
@@ -41,12 +38,10 @@ const JourneySection = () => {
             Enhance your skills and knowledge to compete globally and showcase African
             excellence
           </p>
-          <p className='md:text-2xl'>
+          <p className='md:text-2xl mb-5'>
             Unleash your potential and success on the world stage
           </p>
-          <Link href='/auth/register' className='mt-5'>
-            <Button>Get Started</Button>
-          </Link>
+          <WatchVideoButton />
         </div>
         <div className='md:flex-[50%]'>
           <Image src={Image2} alt='' className=' w-full h-full object-cover' />
@@ -62,13 +57,11 @@ const JourneySection = () => {
             Explore exclusive remote job opportunities with global companies representing
             Africa
           </p>
-          <p className='md:text-2xl'>
+          <p className='md:text-2xl mb-5'>
             Receive comprehensive training and support to secure your desired role and
             represent Africa with pride
           </p>
-          <Link href='/auth/register' className='mt-5'>
-            <Button>Get Started</Button>
-          </Link>
+          <WatchVideoButton />
         </div>
         <div className='md:flex-[50%]'>
           <Image src={Image3} alt='' className=' w-full h-full object-cover' />
