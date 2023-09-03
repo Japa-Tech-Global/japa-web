@@ -32,17 +32,19 @@ const QuestionList = () => {
               openQuestion === index ? setOpenQuestion(undefined) : setOpenQuestion(index)
             }
           >
-            <div className='flex items-center gap-[26px] cursor-pointer'>
+            <div className='flex items-center gap-[26px] cursor-pointer flex-wrap'>
               <Image src={EmojiIcon} alt='' />
               <p>{question.question}</p>
             </div>
-            <DropdownIcon
-              className={
-                openQuestion === index
-                  ? 'duration-500 rotate-180'
-                  : 'duration-500 rotate-0'
-              }
-            />
+            <div>
+              <DropdownIcon
+                className={
+                  openQuestion === index
+                    ? 'duration-500 rotate-180'
+                    : 'duration-500 rotate-0'
+                }
+              />
+            </div>
           </div>
 
           {/* Answer */}
