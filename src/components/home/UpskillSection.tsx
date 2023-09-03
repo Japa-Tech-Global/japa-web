@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Upskillimage from '@/assets/images/home/upskill.webp';
 import Link from 'next/link';
 import Button from '@/common/Button/Button';
+import WatchVideoButton from '@/common/WatchVideoButton';
 
 const UpskillSection = () => {
   return (
@@ -27,12 +28,10 @@ const UpskillSection = () => {
             Join a vibrant community that fosters collaboration and growth, uniquely
             tailored to the Nigerian job market
           </p>
-          <p className='md:text-2xl'>
+          <p className='md:text-2xl mb-5'>
             Conquer the journey from novice to skilled professional
           </p>
-          <Link href='/auth/register' className='mt-5'>
-            <Button>Get Started</Button>
-          </Link>
+          <WatchVideoButton />
         </div>
       </div>
     </section>

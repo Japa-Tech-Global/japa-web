@@ -5,12 +5,24 @@ type Link = {
 
 const navLinks: Link[] = [
   {
-    label: 'Login',
-    href: '/auth/login',
+    label: 'Home',
+    href: '/',
   },
   {
-    label: 'Get Started',
-    href: '/auth/register',
+    label: 'About',
+    href: '/about',
+  },
+  {
+    label: 'Contact',
+    href: '/contact',
+  },
+  {
+    label: 'Blog',
+    href: '/blog',
+  },
+  {
+    label: 'FAQ',
+    href: '/faq',
   },
 ];
 

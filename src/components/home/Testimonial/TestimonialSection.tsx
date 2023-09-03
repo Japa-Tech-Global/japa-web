@@ -12,10 +12,18 @@ const TestimonialSection = () => {
         {testimonies.map((testimony, index) => (
           <div
             key={index}
-            className='flex items-center pl-[15px] pr-10 py-[35px] bg-white border border-[#969696] rounded-[27px] gap-[33px] w-full xl:w-[49%]'
+            className='flex items-start pl-[15px] pr-10 py-[35px] bg-white border border-[#969696] rounded-[27px] gap-[33px] w-full xl:w-[49%] flex-wrap md:flex-nowrap'
           >
             <Image src={testimony.image} alt='' />
-            <p className='text-[#555555] text-lg md:text-2xl'>{testimony.content}</p>
+            <div className='flex flex-col'>
+              <p className='text-[#555555] text-lg md:text-2xl'>{testimony.content1}</p>
+              <p className='text-[#555555] text-lg md:text-2xl mt-5'>
+                {testimony.content2}
+              </p>
+              <p className='mt-[55px]  text-lg md:text-2xl font-medium'>
+                {testimony.name}
+              </p>
+            </div>
           </div>
         ))}
       </div>
