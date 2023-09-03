@@ -3,6 +3,12 @@ import React from 'react';
 import messageIcon from '@/assets/icons/contact/message.svg';
 import phoneIcon from '@/assets/icons/contact/phone.svg';
 import Image from 'next/image';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'JAPA - Contact',
+};
+ 
 
 const ContactPage = () => {
   return (
