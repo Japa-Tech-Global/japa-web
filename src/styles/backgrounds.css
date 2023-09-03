@@ -11,3 +11,38 @@
   background-size: auto;
   background-position: bottom;
 }
+
+.about-bg {
+  background-image: url(../assets/backgrounds/about.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top;
+}
+
+.about-header-bg {
+  background-image: url(../assets/backgrounds/about-header.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-bg {
+  background-image: url(../assets/backgrounds/contact.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: bottom;
+}
+
+.faq-bg {
+  background-image: url(../assets/backgrounds/faq.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top right;
+}
+
+.faq-header-bg {
+  background-image: url(../assets/backgrounds/faq-header.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
