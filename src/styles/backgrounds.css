@@ -11,3 +11,17 @@
   background-size: auto;
   background-position: bottom;
 }
+
+.about-bg {
+  background-image: url(../assets/backgrounds/about.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: bottom;
+}
+
+.contact-bg {
+  background-image: url(../assets/backgrounds/contact.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: bottom;
+}
