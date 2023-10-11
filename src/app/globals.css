@@ -59,7 +59,7 @@ body {
 }
 
 .inputContainer>* input,
-textarea {
+textarea, select {
   padding: 12px;
   font-size: 1rem;
   font-family: var(--font-primary);
@@ -70,12 +70,14 @@ textarea {
 }
 
 .inputContainer>* input::placeholder,
-textarea::placeholder {
+textarea::placeholder,
+select::placeholder {
   color: #acadb4;
 }
 
 .inputContainer>* input:focus,
-textarea:focus {
+textarea:focus
+select:focus {
   outline: 1px solid #7D30EE;
   border: 1px solid #7D30EE;
 }
