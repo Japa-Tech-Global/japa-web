@@ -11,7 +11,7 @@ const Navbar = () => {
     <nav className='h-fit w-full bg-white flex items-center justify-between px-primary gap-[45px]  py-4 md:py-[26px] sticky top-0 z-20'>
       <div className='flex-[50%] items-center justify-center gap-[3vw] hidden md:flex'>
         {navLinks.map((link) => (
-          <Link key={link.href} href={link.href} className='text-[21px]'>
+          <Link key={link.href} href={link.href} className='hover:border-b-2 hover:border-purple-500 hover:text-purple-500'>
             {link.label}
           </Link>
         ))}
