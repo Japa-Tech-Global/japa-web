@@ -1,8 +1,6 @@
 import { SearchIcon,   } from '@heroicons/react/outline';
 import { CiLocationOn } from "react-icons/ci";
-import { useState } from 'react'
-
-
+import { useState } from 'react';
 
 const SearchInput = () => {
     const [query, setQuery] = useState("");

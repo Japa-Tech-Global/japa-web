@@ -12,7 +12,7 @@ const JobSection = () => {
         <JobBox/>
         <JobBox/>
       </div>
-      <div className="text-center my-8  border-t-2 border-gray-200"><Link href='/' className=" text-purple-800 text-sm underline font-bold ">See more...</Link></div> 
+      <div className="text-center my-8  border-t-2 border-gray-200"><Link href='/' className="text-purple-800 text-sm underline font-bold">See more...</Link></div> 
     </div>       
 
   )

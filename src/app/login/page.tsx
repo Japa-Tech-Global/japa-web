@@ -5,10 +5,11 @@
 import { Users } from "./users";
 
 import Navbar from "./Navbar/Navbar";
-import SearchInput from "./Navbar/SearchInput";
+
 import JobSection from "./Job/JobSection";
 import SavedJobs from "./SavedJobs/SavedJobs";
 import Link from "next/link";
+import SearchInput from "./Navbar/SearchInput";
 
 
 export default function Job(){
@@ -31,10 +32,3 @@ export default function Job(){
         </main>
     )
 }
-            {/* <ul className="p-0 list-none text-center">
-                    {Users.filter(user => user.first_name.toLowerCase().includes(query)).map((user) => (
-                        <li key={user.id} className="mb-5 text-xl text-[#444]">
-                            {user.first_name}
-                        </li>
-                    ))}
-                </ul> */}
