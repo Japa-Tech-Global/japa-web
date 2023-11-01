@@ -1,6 +1,5 @@
 // @ts-nocheck
 
-// import cloud from "./image/cloud.png"
 import Input from "./input";
 import Image from "next/image";
 import hangout from "./image/hangout.png"
@@ -9,13 +8,13 @@ import Service from './service'
 import Plan from "./plan";
 const Form = () => {
   return (
-    <section className="overflow-y-scroll bg-[#f5f6f7] flex w-full h-screen flex-col rounded-lg overflow-hidden">
-        <div className="px-primary flex items-center flex-col  rounded-lg">
+    <section className="overflow-y-scroll bg-purple-50 flex items-center w-full h-screen flex-col rounded-lg overflow-hidden">
+        <div className="px-primary flex items-center flex-col rounded-lg max-w-[100vw]">
             <div className="w-full flex items-center flex-col mx-auto my-5">
                 <Image src={hangout}
                 alt='google pic' 
                 width={100} hanging={100} 
-                className="bg-cover bg-center h-[200px] w-[810px] rounded-lg"/>
+                className="bg-cover bg-center w-[810px] lg:h-[200px] h-[150px] lg:w-[810px] rounded-lg"/>
             </div>
 
             <div className="bg-white w-full  max-w-[810px] my-5 mb-4 border border-gray-200 rounded-xl">
@@ -40,22 +39,25 @@ const Form = () => {
                         <p className="text-red-600 p-6">* Indicates required question</p>
                     </div>
             </div>
+           
             <Input />
             <Service />
             <Plan />
             <div className="text-xl shadow-md bg-white  w-full max-w-[810px] rounded-lg p-8 mb-8">
                 <p>Pay for the CV here</p>
             </div>
-        </div>
-      
-        <div className="flex justify-center gap-[37rem]">
-            <div className="flex justify-start">
+
+            <div className="w-full flex text-md  lg:text-lg">
+            <div className="flex-1">
                 <button className=" bg-purple-700 hover:bg-purple-600 rounded-lg py-4 px-8 text-white mb-24">Submit</button>
             </div>
-            <div className="flex justify-end">
+            <div className="flex-2">
                 <p><Link href='/' className="text-purple-600">Clear Form</Link></p>
             </div>
         </div>
+        </div>
+      
+
     </section>
   )
 }
