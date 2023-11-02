@@ -8,7 +8,7 @@ import Service from './service'
 import Plan from "./plan";
 const Form = () => {
   return (
-    <section className="overflow-y-scroll bg-purple-50 flex items-center w-full h-screen flex-col rounded-lg overflow-hidden">
+    <section className="m-auto overflow-y-scroll bg-purple-50 flex items-center w-full h-screen flex-col rounded-lg min-w-[300px]">
         <div className="px-primary flex items-center flex-col rounded-lg max-w-[100vw]">
             <div className="w-full flex items-center flex-col mx-auto my-5">
                 <Image src={hangout}
@@ -19,10 +19,10 @@ const Form = () => {
 
             <div className="bg-white w-full  max-w-[810px] my-5 mb-4 border border-gray-200 rounded-xl">
                 <div className="p-8 border-t-[15px] border-purple-600 rounded-lg">
-                    <h1 className="text-3xl mb-5">JAPA's CV Revamp Form</h1>
-                    <p>Ready to unlock your CV's full potential?  Complete our CV Revamp form and take the first step towards a standout
+                    <h1 className="text-3xl mb-5">JAPA &aposs CV Revamp Form</h1>
+                    <p>Ready to unlock your CV&apos;s full potential?  Complete our CV Revamp form and take the first step towards a standout
                         resume that lands you interviews and career opportunities. Our expert team will carefully analyze your existing CV, 
-                        provide personalized recommendations, and revamp it to perfection. Don't miss out on this opportunity to elevate 
+                        provide personalized recommendations, and revamp it to perfection. Don&apos;t miss out on this opportunity to elevate 
                         your career prospects. Fill out the form now and let us transform your CV into a powerful tool for success!
                     </p>
                 </div>
