@@ -24,6 +24,7 @@ const navLinks: Link[] = [
     label: 'FAQ',
     href: '/faq',
   },
+
 ];
 
 export default navLinks;

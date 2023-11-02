@@ -23,7 +23,7 @@ const MobileMenu = () => {
           <NavMenuIcon />
         </button>
         {open && (
-          <nav className='rounded absolute left-0 top-12 bg-white w-40 shadow-md'>
+          <nav className='rounded flex justify-center left--12 top-12 bg-white w-40 shadow-md'>
             <ul className='flex flex-col'>
               {navLinks.map((item) => (
                 <Link href={item.href} key={item.href}>
