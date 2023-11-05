@@ -6,6 +6,7 @@ import hangout from "./image/hangout.png"
 import Link from "next/link";
 import Service from './service'
 import Plan from "./plan";
+import image from './image/cloud.png'
 const Form = () => {
   return (
     <section className="m-auto overflow-y-scroll bg-purple-50 flex items-center w-full h-screen flex-col rounded-lg min-w-[300px]">
@@ -19,7 +20,7 @@ const Form = () => {
 
             <div className="bg-white w-full  max-w-[810px] my-5 mb-4 border border-gray-200 rounded-xl">
                 <div className="p-8 border-t-[15px] border-purple-600 rounded-lg">
-                    <h1 className="text-3xl mb-5">JAPA &aposs CV Revamp Form</h1>
+                    <h1 className="text-3xl mb-5">JAPA &apos; CV Revamp Form</h1>
                     <p>Ready to unlock your CV&apos;s full potential?  Complete our CV Revamp form and take the first step towards a standout
                         resume that lands you interviews and career opportunities. Our expert team will carefully analyze your existing CV, 
                         provide personalized recommendations, and revamp it to perfection. Don&apos;t miss out on this opportunity to elevate 
@@ -27,12 +28,23 @@ const Form = () => {
                     </p>
                 </div>
                 
-                    <div className="flex flex-col p-7 border-t-2 border-gray-100 my-2">
-                        <div className="flex gap-4">
-                            <p className="text-gray-700">samuelvictoralexander@gmail.com</p>
-                            <p> <Link href="/" className="text-blue-600 text-lg mr-4">Switch account</Link></p>
+                    <div className="flex justify-between px-primary border-t-2 border-gray-100 my-2">
+                        <div className="flex flex-col p-7">
+                            <div className="flex gap-4">
+                                <p className="text-gray-700">samuelvictoralexander@gmail.com</p>
+                                <p> <Link href="/" className="text-blue-600 text-lg mr-4">Switch account</Link></p>
+                            </div>
+                            <p>Not shared</p>
                         </div>
-                        <p>Not shared</p>
+                        <div className="w-10  pt-8">
+                            <Link href="">
+                                <Image 
+                                    src={image} 
+                                    width={100} 
+                                    height={100}
+                                />
+                            </Link>
+                        </div>
                     </div>
 
                     <div className="border-t-2">
