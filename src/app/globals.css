@@ -59,7 +59,8 @@ body {
 }
 
 .inputContainer>* input,
-textarea, select {
+textarea,
+select {
   padding: 12px;
   font-size: 1rem;
   font-family: var(--font-primary);
@@ -76,8 +77,7 @@ select::placeholder {
 }
 
 .inputContainer>* input:focus,
-textarea:focus
-select:focus {
+textarea:focus select:focus {
   outline: 1px solid #7D30EE;
   border: 1px solid #7D30EE;
 }
@@ -130,33 +130,12 @@ select:focus {
   background: #15348B;
 }
 
+.form-control {
+  width: 100% !important;
+  height: 43px !important;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.swal2-container {
+  width: 300px !important;
+  max-width: 300px !important;
+}
