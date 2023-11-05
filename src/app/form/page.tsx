@@ -6,7 +6,10 @@ import hangout from "./image/hangout.png"
 import Link from "next/link";
 import Service from './service'
 import Plan from "./plan";
-import image from './image/cloud.png'
+import Cloud from './image/cloud.png'
+import Email from './image/emailBox.svg'
+
+
 const Form = () => {
   return (
     <section className="m-auto overflow-y-scroll bg-purple-50 flex items-center w-full h-screen flex-col rounded-lg min-w-[300px]">
@@ -28,20 +31,32 @@ const Form = () => {
                     </p>
                 </div>
                 
-                    <div className="flex justify-between px-primary border-t-2 border-gray-100 my-2">
-                        <div className="flex flex-col p-7">
-                            <div className="flex gap-4">
-                                <p className="text-gray-700">samuelvictoralexander@gmail.com</p>
-                                <p> <Link href="/" className="text-blue-600 text-lg mr-4">Switch account</Link></p>
+                    <div className="flex justify-between flex-wrap px-primary border-t-2 border-gray-100 p-7">
+                        <div className="flex flex-col">
+                            <div className="flex gap-2 flex-wrap">
+                                <p className="text-gray-700 font-bold">samuelvictoralexander@gmail.com</p>
+                                <p> <Link href="/" className="flex-1 text-blue-600 lg:text-lg mr-4 text-sm">Switch account</Link></p>
                             </div>
-                            <p>Not shared</p>
-                        </div>
-                        <div className="w-10  pt-8">
-                            <Link href="">
+                            <div className="flex gap-2">
                                 <Image 
-                                    src={image} 
+                                    src={Email} 
+                                    alt="Email symbol"  
+                                    width={100} 
+                                    height={100} 
+                                    className="w-5"
+                                />
+                                
+                                <p>Not shared</p>
+                            </div>
+                            
+                        </div>
+                        <div className="w-8 ">
+                            <Link href="/">
+                                <Image 
+                                    src={Cloud} 
                                     width={100} 
                                     height={100}
+                                    alt="cloud symbol"
                                 />
                             </Link>
                         </div>
