@@ -3,7 +3,7 @@ const nextConfig = {
   output: "export",
   images: {
     unoptimized: true,
-    domains: ['localhost', 'japatalent.com'],
+    domains: ['localhost', 'japatalent.com']
   },
   trailingSlash: true,
 }
