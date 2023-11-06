@@ -5,7 +5,7 @@ import Users from './data/data'
 
 type StateChangeCallback = (state: any) => null
 
-const Input: React.FC<{ onInputChange: StateChangeCallback }> = ({ onInputChange }) => {
+const input: React.FC<{ onInputChange: StateChangeCallback }> = ({ onInputChange }) => {
 
     const [state, setState] = useState<{}>();
 
@@ -14,11 +14,9 @@ const Input: React.FC<{ onInputChange: StateChangeCallback }> = ({ onInputChange
 
     }
 
-    useEffect(
-    () => {
+    useEffect(() => {
         onInputChange(state);
-    }, [state, onInputChange],
-    )
+    }, [state])
 
     return (
         <div className='w-full flex justify-center flex-col items-center mx-auto'>
@@ -42,4 +40,4 @@ const Input: React.FC<{ onInputChange: StateChangeCallback }> = ({ onInputChange
     )
 }
 
-export default Input
+export default input
