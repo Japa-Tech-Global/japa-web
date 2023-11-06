@@ -3,7 +3,7 @@ import Image1 from '@/assets/images/home/journey1.webp';
 import Image2 from '@/assets/images/home/journey2.webp';
 import Image3 from '@/assets/images/home/journey3.webp';
 import Image from 'next/image';
-import WatchVideoButton from '@/common/WatchVideoButton';
+import WatchVideoButton from '@/common/GetStartedButton';
 
 const JourneySection = () => {
   return (
