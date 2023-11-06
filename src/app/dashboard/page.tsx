@@ -6,9 +6,15 @@ import RolesMarquee from "@/components/RolesMarquee"
 import Image from "next/image";
 import Link from "next/link";
 import { BsArrowRightShort } from "react-icons/bs"
+import Swal from "sweetalert2";
+import { deleteCookie, getCookie } from 'cookies-next';
+import { useEffect, useState } from "react";
 
 
 export default function Home() {
+  const [menuStatus,setMenuStatus]=useState(false);
+  const [ auth, setAuth ] = useState(false);
+  const [userInfo, setUserInfo] = useState(undefined);
   const roles = ['Front End Developer', 'UI/UX Designer', 'Developers', 'Graphic Designer', 'SQL Database Administrator', 'AI Expert', 'Data Analyst', 'Cyber Security Expert', 'Content Creator'];
   const openings = [
     { role: 'UI/UX Designer at JAPA', type: 'Remote', logo: 'https://japa-steel.vercel.app/mtn.png', description: 'We are currentky seeking to hire an experienced UI/UX Designer with an extensive and proven  experience who can work in high...' },
@@ -24,9 +30,46 @@ export default function Home() {
     { img: 'https://japa-steel.vercel.app/splash7.jpg', title: 'Key Factors to Consider When Job Hunting in 2023' },
   ];
 
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 2000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    },
+    customClass:'toaster'
+  });
+
+  function signOut(){
+    deleteCookie('token');
+    localStorage.removeItem('user');
+    setAuth(false);
+    setMenuStatus(false);
+    Toast.fire({
+      icon: 'success',
+      title: 'Signed Out Successfully'
+    });
+  }
+
+  useEffect(() => {
+    const data = localStorage.getItem('user');
+    if (data) {
+      setUserInfo(JSON.parse(data));
+    }
+    if(getCookie('token')&&getCookie('token')!==''){
+      setAuth(true);
+    }else{
+      setAuth(false);
+    }
+  }, []);
+
+
   return (
     <>
-      <Header page='home' />
+      <Header page='home' auth={auth} userInfo={userInfo} signOut={signOut} menuStatus={menuStatus} setMenuStatus={setMenuStatus} />
       <main>
 
         <div className="px-9 sm:px-7 md:px-0 py-24 text-white h-auto sm:h-[80vh] flex justify-center items-center flex-col bg-slate-500"
