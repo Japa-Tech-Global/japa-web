@@ -18,7 +18,7 @@ const Dropdown = () => {
             <div className="relative block">
                 <button
                     type="button"
-                    className="w-[300px] flex justify-between gap-4 px-8 py-2 text-black border border-[#02001e]  hsl(244,100%,6%)rgb(2,0,30)
+                    className="w-full max-w-[700px] flex justify-between gap-4 px-8 py-2 text-gray-400 border border-[#02001e]  hsl(244,100%,6%)rgb(2,0,30)
                     rounded-lg"
                     onClick={toggleDropdown}
                 >

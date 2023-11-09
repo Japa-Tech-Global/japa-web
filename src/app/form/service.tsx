@@ -17,7 +17,7 @@ const Service = () => {
     
 
     return (
-        <div className="bg-white p-8 w-full max-w-[810px] mb-8 rounded-lg">
+        <div className="bg-white p-8 w-full max-w-[810px] rounded-lg">
               <p className="text-xl mb-8">How did you hear about our Service?</p>  
                 {
                     items.map((item) => (

@@ -8,6 +8,7 @@ import Input from './Input'
 import Service from './service';
 import Plan from './plan';
 import Button from './Button';
+import Price from './price';
 
 const Form = () => {
   return (
@@ -23,7 +24,7 @@ const Form = () => {
             /> 
         </div>
 
-        <div className='px-primary flex-1 flex flex-col justify-center border-2 border-red-500'>
+        <div className='px-primary flex-1 flex flex-col justify-center'>
           <div className='mx-auto mb-12 max-w-[700px]'>
               <div className='flex justify-center'>
                 <Image 
@@ -32,7 +33,7 @@ const Form = () => {
                     height={100}
                     alt='logo'
                     priority
-                    className='mt-[25rem] mb-8 w-32 lg:w-44'
+                    className='mt-[80rem] mb-8 w-32 lg:w-44'
                   />
 
               </div>
@@ -40,7 +41,11 @@ const Form = () => {
               <p className='text-lg my-8'><span className='text-red-600'>*</span>Indicates Required questions</p>
               <Input />
               <Service />
-              <Plan />
+              <div className='mb-12 max-w-[700px]'>
+                <p>Select a plan <span className='text-red-600'>*</span></p>
+                <Plan />
+                <Price  price={10000}/>
+              </div>
 
 
               <Button />
