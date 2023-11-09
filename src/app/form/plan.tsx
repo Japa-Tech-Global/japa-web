@@ -1,42 +1,69 @@
 //@ts-nocheck
+'use client'
+import React, { useState } from 'react'
 
-"use client"
-import { useState } from 'react'
-import React from 'react'
+const Dropdown = () => {
+    const [isOpen, setIsOpen] = useState(false);
 
-const Plan = () => {
+    const toggleDropdown = () => {
+        setIsOpen(!isOpen);
+    };
 
-  const items: {value, label} = [
-    {value: "instagram", label: "Basic"},
-    {value: "linkedin", label: "Plus"},
-    {value: "friend", label: "Pro"},
-    {value: "japa community", label: "Premium"},
-    {value:"other", label:"Other:" }
-]
+    const closeDropdown = () => {
+        setIsOpen(false);
+    };
 
-  const [value, setValue] = useState(null)
+    return (
+        <div className='w-full py-6 pb-8'>
+            <div className="relative block">
+                <button
+                    type="button"
+                    className="w-[300px] flex justify-between gap-4 px-8 py-2 text-black border border-[#02001e]  hsl(244,100%,6%)rgb(2,0,30)
+                    rounded-lg"
+                    onClick={toggleDropdown}
+                >
+                    Basic Plan <svg className="w-2.5 h-2.5 ml-2.5 self-center" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+                    </svg>
+                </button>
 
-  return (
-    <div className="bg-white p-8 w-full max-w-[810px] mb-8 rounded-lg">
-      <p className="text-xl mb-8">What Plan do you want?</p>  
-        {
-            items.map((item) => (
-                <div key={item.value} className="flex gap-4 my-4">
-                    <input 
-                        type="radio" 
-                        name="sevice"
-                        value={item.value}
-                        id={item.value}
-                        checked={value === item.value}
-                        onChange={e => setValue(e.target.value)}
-                        className="bg-gray-400 rounded transform scale-[2]"
-                    />
-                    <label htmlFor={item.vlue}>{item.label}</label>
-                </div>
-            ))
-        }
-      </div>
-  )
+                {isOpen && (
+                    <div className="origin-top-right absolute right-0 mt-2 w-44 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                        <ul role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                            <li>
+                                <a
+                                    href="#"
+                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                    onClick={closeDropdown}
+                                >
+                                    Option 1
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                    onClick={closeDropdown}
+                                >
+                                    Option 2
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                    onClick={closeDropdown}
+                                >
+                                    Option 3
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                )}
+            </div>
+            
+        </div>
+    )
 }
 
-export default Plan;
+export default Dropdown;

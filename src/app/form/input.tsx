@@ -2,18 +2,18 @@
 import React from 'react'
 import Users from './data/data'
 
-const input = () => {
+const Input = () => {
   return(
-    <div className='w-full flex justify-center flex-col items-center mx-auto'>
+    <div className='flex flex-col'>
         {
             Users.map((user) => {
                 return(
-                    <div key={user.id} className='w-full mb-8 p-8 bg-white  border-spacing-2 rounded-lg shadow-md'>
-                        <p>{user.name} <span className='text-red-600'>*</span></p>
+                    <div key={user.id} className='mb-4 p-4 bg-white'>
+                        <p className='font-bold'>{user.name} <span className='text-red-600'>*</span></p>
                         <input 
                             type="text" 
-                            placeholder='Your answer'
-                            className="w-full mt-8 focus:outline-none border-b-2 border-gray-500 border-t-0 active:border-none"
+                            placeholder={user.placeholder}
+                            className="w-full mt-4 py-2 px-6 border-2 border-gray-500 items-left rounded-lg"
                         />
                     </div>
                 )
@@ -23,4 +23,4 @@ const input = () => {
   )
 }
 
-export default input
+export default Input

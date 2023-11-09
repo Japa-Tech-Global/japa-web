@@ -8,7 +8,7 @@ const Service = () => {
         {value: "linkedin", label: "Linkedin"},
         {value: "friend", label: "Friend"},
         {value: "japa community", label: "Japa Community"},
-        {value:"other", label:"Other:" }
+        {value:"other", label:"Others" }
     ]
     const [value, setValue] = useState(null)
 
