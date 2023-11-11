@@ -23,7 +23,7 @@ const Form = () => {
         </div>
 
         <div className='px-primary'>
-          <div className='mx-auto mb-4 w-[580px]'>
+          <div className='mx-auto mb-4 lg:w-[580px] md:w-full'>
               <div className='flex justify-center'>
 
                 <Image
