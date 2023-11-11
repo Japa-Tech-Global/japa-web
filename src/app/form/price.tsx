@@ -2,6 +2,9 @@
 import { AiOutlineCheck } from 'react-icons/ai';
 
 
+
+
+
 const Price = ({price}) => {
   
   return (
