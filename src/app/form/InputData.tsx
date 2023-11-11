@@ -2,7 +2,7 @@
 import React from 'react'
 import Users from './data/data'
 
-const Input = () => {
+const InputData = () => {
   return(
     <div className='flex flex-col'>
         {
@@ -23,4 +23,4 @@ const Input = () => {
   )
 }
 
-export default Input;
+export default InputData;
