@@ -1,9 +1,8 @@
 // @ts-nocheck
 
 import Image from 'next/image';
-import Logo from './image/logo.svg'
-import FormBox from './image/formBox.svg'
-// import Service from './service';
+import Formimage from './image/formBox.svg'
+import FormLogo from './image/logo.svg'
 import Input from './Input'
 import Service from './service';
 import Plan from './plan';
@@ -12,33 +11,31 @@ import Price from './price';
 
 const Form = () => {
   return (
-    <main className='w-full h-screen flex gap-12'>
-        <div className='relative bg-white flex-initial'>
-            <Image 
-                src={FormBox}
-                width={500}
-                height={500}
-                alt='Japa&apos;s CV Revamp Form'
-                priority    
-                className=''
-            /> 
+    <main className='w-full h-screen grid grid-cols-2'>
+        <div className='relative bg-white'>
+            <Image
+              src={Formimage}
+              width={600}
+              height={500}
+              alt='Form Image'
+              className='w-full'
+            />
         </div>
 
-        <div className='px-primary flex-1 flex flex-col justify-center'>
-          <div className='mx-auto mb-12 max-w-[700px]'>
+        <div className='px-primary'>
+          <div className='mx-auto mb-4 w-[580px]'>
               <div className='flex justify-center'>
-                <Image 
-                    src={Logo}
-                    width={100}
-                    height={100}
-                    alt='logo'
-                    priority
-                    className='mt-[80rem] mb-8 w-32 lg:w-44'
-                  />
 
+                <Image
+                  src={FormLogo}
+                  width={100}
+                  height={100}
+                  alt='Form Logo'
+                  className='lg:w-48 md:w-30 my-8 mt-36' 
+                />
               </div>
-              <p className='lg:text-2xl text-lg'>Ready to Unlock your CV&apos;s full Potential</p>
-              <p className='text-lg my-8'><span className='text-red-600'>*</span>Indicates Required questions</p>
+              <p className='lg:text-2xl text-lg text-center'>Ready to Unlock your CV&apos;s full Potential</p>
+              <p className='pl-4 text-lg my-8'><span className='text-red-600'>*</span>Indicates Required questions</p>
               <Input />
               <Service />
               <div className='mb-12 max-w-[700px]'>

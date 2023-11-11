@@ -28,7 +28,7 @@ const Dropdown = () => {
                 </button>
 
                 {isOpen && (
-                    <div className="origin-top-right absolute right-0 mt-2 w-44 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                    <div className="origin-top-right absolute right-0 mt-2 w-full rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                         <ul role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                             <li>
                                 <a
