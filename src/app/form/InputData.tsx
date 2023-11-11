@@ -1,6 +1,6 @@
 //@ts-nocheck
 import React from 'react'
-import Users from './data/data'
+import Users from './data/Users'
 
 const InputData = () => {
   return(

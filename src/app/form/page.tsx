@@ -4,10 +4,10 @@ import Image from 'next/image';
 import Formimage from './image/formBox.svg'
 import FormLogo from './image/logo.svg'
 import Input from './InputData'
-import Service from './service';
-import Plan from './plan';
+import Service from './Service';
+import Plan from './Dropdown';
 import Button from './Button';
-import Price from './price';
+import Price from './Price';
 
 const Form = () => {
   return (
