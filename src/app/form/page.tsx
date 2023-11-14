@@ -31,7 +31,7 @@ const Form = () => {
                   width={100}
                   height={100}
                   alt='Form Logo'
-                  className='lg:w-48 md:w-30 my-8 mt-36' 
+                  className='lg:w-48 md:w-40 my-8 mt-20' 
                 />
               </div>
               <p className='lg:text-2xl text-lg text-center'>Ready to Unlock your CV&apos;s full Potential</p>
