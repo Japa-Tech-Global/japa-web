@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import HeartIcon from '@/assets/icons/home/heart.svg';
 import CommunityImage from '@/assets/images/home/community-collage.webp';
-import WatchVideoButton from '@/common/WatchVideoButton';
+import GetStartedButton from '@/common/GetStartedButton';
 
 const Hero = () => {
   return (
@@ -17,7 +17,7 @@ const Hero = () => {
           <p className='text-lg lg:text-[22px] mb-[85px]'>
             The Easiest Way to Boost Your Employability and Secure Global Opportunities
           </p>
-          <WatchVideoButton />
+          <GetStartedButton />
         </div>
       </div>
       <div className='py-[50px] px-12 bg-primary md:flex-[50%] w-full h-[calc(100vh-114px)] flex flex-col'>

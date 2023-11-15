@@ -5,8 +5,8 @@ import JourneySection from '@/components/home/JourneySection';
 import TestimonialSection from '@/components/home/Testimonial/TestimonialSection';
 import UpskillSection from '@/components/home/UpskillSection';
 import AppLayout from '@/components/layout/AppLayout';
-import RegisterPage from './auth/register/page';
-import LoginForm from '@/components/auth/LoginForm';
+// import RegisterPage from './_auth/register/page';
+// import LoginForm from '@/components/auth/LoginForm';
 
 export default function HomePage() {
   return (
@@ -17,7 +17,7 @@ export default function HomePage() {
       <JourneySection />
       <BenefitSection />
       <TestimonialSection />
-      <RegisterPage />
+      {/* <RegisterPage /> */}
     </AppLayout>
   );
 }

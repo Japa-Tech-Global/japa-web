@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Upskillimage from '@/assets/images/home/upskill.webp';
 import Link from 'next/link';
 import Button from '@/common/Button/Button';
-import WatchVideoButton from '@/common/WatchVideoButton';
+import WatchVideoButton from '@/common/GetStartedButton';
 
 const UpskillSection = () => {
   return (
