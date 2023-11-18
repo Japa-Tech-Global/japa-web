@@ -1,4 +1,4 @@
-//@ts-nocheck
+// @ts-nocheck
 'use client'
 import React from 'react'
 import Input from "./input";
@@ -105,19 +105,19 @@ const Toast = Swal.mixin({
                 <p>Pay for the CV here</p>
             </div> */}
 
-            <div className="w-full flex text-md  lg:text-lg">
-            <div className="flex-1">
-                <button className=" bg-purple-700 hover:bg-purple-600 rounded-lg py-4 px-8 text-white mb-24">Submit</button>
+                <div className="w-full flex text-md  lg:text-lg">
+                    <div className="flex-1">
+                        <button className="  bg-purple-700 hover:bg-purple-600 rounded-lg py-4 px-8 text-white mb-24" onClick={submitForm} disabled={loading}>Submit</button>
+                    </div>
+                    {/* <div className="flex-2">
+                        <p><Link href='/' className="text-purple-600">Clear Form</Link></p>
+                    </div> */}
+                </div>
             </div>
-            <div className="flex-2">
-                <p><Link href='/' className="text-purple-600">Clear Form</Link></p>
-            </div>
-        </div>
-        </div>
-      
 
-    </section>
-  )
+
+        </section>
+    )
 }
 
 export default Form;
