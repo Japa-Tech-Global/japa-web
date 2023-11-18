@@ -1,16 +1,17 @@
 import React from 'react';
-import Logo from '@/assets/brand/logo.svg';
+// import Logo from '@/assets/brand/logo.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 import InstagramIcon from '@/assets/icons/socials/instagram.svg';
 import LinkedinIcon from '@/assets/icons/socials/linkedin.svg';
+import JapaLogo from '../../app/form/image/logo.svg'
 
 const Footer = () => {
   return (
     <footer className='mt-[100px] border-t border-t-primary'>
       <div className='px-primary  pb-[70px] pt-10 '>
         <div className='flex items-start justify-between flex-wrap gap-10'>
-          <Image src={Logo} alt='JAPA' />
+          <Image src={JapaLogo} width={100} height={100} alt='JAPA' />
           <div className='flex flex-wrap gap-12'>
             <ul className='flex flex-col gap-5'>
               <p className='text-xl lg:text-3xl font-medium mb-5'>Networks</p>
@@ -48,6 +49,11 @@ const Footer = () => {
               <li className='text-lg lg:text-2xl'>
                 <Link href='/cv-template' className='hover:text-primary duration-300'>
                   CV Templates
+                </Link>
+              </li>
+              <li className='text-lg lg:text-2xl'>
+                <Link href='/CV' className='hover:text-primary duration-300'>
+                  CV Revamp
                 </Link>
               </li>
               <li className='text-lg lg:text-2xl'>

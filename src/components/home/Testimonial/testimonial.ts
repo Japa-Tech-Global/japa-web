@@ -28,7 +28,7 @@ const testimonies: Testimony[] = [
     image: testimony3Image,
     content1:
       'I just want to say thank you to the Japa team for the exclusive role I got',
-    content2: 'I have started working and it can only get better form here',
+    content2: 'I have started working and it can only get better from here',
     name: 'Jennifer',
   },
 ];
