@@ -91,7 +91,7 @@ export default function LogIn() {
           />
         </div> 
   
-        <div className='absolute right-[9vw] bottom-[13vh] sm:right-[29vw] sm:bottom-[35vh]'>
+        <div className='absolute right-[9vw] bottom-[13vh] sm:right-[29vw] sm:bottom-[20vh]'>
           <Image
             src={Blue}
             alt='blue_circle'
