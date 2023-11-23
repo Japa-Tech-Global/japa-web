@@ -11,6 +11,9 @@ import Swal from 'sweetalert2';
 import axios from 'axios';
 import Header from '@/components/Header';
 import { useRouter } from 'next/navigation';
+import Blue from '../../assets/shapes/Blue.svg'
+import Pink from '../../assets/shapes/Pink.svg'
+import Brown from '../../assets/shapes/Brown.svg'
 
 export default function SignUp() {
   const [first_name,setFirst_name] = useState('');
@@ -98,7 +101,7 @@ export default function SignUp() {
         
         <div className='absolute -z-10 right-[8vw] top-[7vh] sm:right-[20vw] sm:top-[10vh]'>
           <Image
-            src='/blue_circle.png'
+            src={Blue}
             alt='blue_circle'
             width={90}
             height={90}
@@ -107,7 +110,7 @@ export default function SignUp() {
   
         <div className='absolute -z-10 left-[2vw] sm:left-[10vw] sm:top-[50vh]'>
           <Image
-            src='/yellow_circle.png'
+            src={Brown}
             alt='yellow_circle'
             width={40}
             height={40}
@@ -117,7 +120,7 @@ export default function SignUp() {
   
         <div className='absolute -z-10 right-[3vw] bottom-[1vh] sm:right-[27vw] sm:bottom-[1%]'>
           <Image
-            src='/pink_circle.png'
+            src={Pink}
             alt='pink_circle'
             width={20}
             height={20}
