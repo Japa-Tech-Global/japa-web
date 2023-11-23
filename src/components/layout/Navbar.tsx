@@ -1,3 +1,4 @@
+//@ts-nocheck
 import React from 'react';
 import navLinks from './navLinks';
 import Link from 'next/link';
@@ -5,13 +6,14 @@ import PlayIcon from '@/assets/icons/home/play.svg';
 import Image from 'next/image';
 import MobileMenu from './MobileMenu';
 import { mainVideoLink } from '@/functions/variables';
-
+import JapaLogo from '../../assets/shapes/JapaLogo.svg'
 const Navbar = () => {
   return (
     <nav className='h-fit w-full bg-white flex items-center justify-between px-primary gap-[45px]  py-4 md:py-[26px] sticky top-0 z-20'>
-      <div className='flex-[50%] items-center justify-center gap-[3vw] hidden md:flex'>
+      <Image src={JapaLogo}alt="JapaLogo"  width={100} height={100}  className='lg:w-40'/>
+      <div className='text-sm lg:text-2xl md:text-lg flex-[50%] items-center justify-center gap-[3vw] hidden md:flex'>
         {navLinks.map((link) => (
-          <Link key={link.href} href={link.href} className='hover:border-b-2 hover:border-purple-500 hover:text-purple-500'>
+          <Link key={link.href} href={link.href} className='nav-item  font-md'>
             {link.label}
           </Link>
         ))}
