@@ -7,6 +7,9 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import Swal from 'sweetalert2';
 import { setCookie } from 'cookies-next';
+import Brown from '../../assets/shapes/Brown.svg'
+import Pink from '../../assets/shapes/Pink.svg'
+import Blue from '../../assets/shapes/Blue.svg'
 
 export default function LogIn() {
   const [email,setEmail] = useState('');
@@ -71,8 +74,8 @@ export default function LogIn() {
         
         <div className='absolute right-[10vw] top-[7vh] sm:right-[20vw] sm:top-[10vh]'>
           <Image
-            src='/yellow_circle.png'
-            alt='yellow_circle'
+            src={Brown}
+            alt='brown circle'
             width={90}
             height={90}
           />
@@ -80,22 +83,22 @@ export default function LogIn() {
   
         <div className='absolute left-[2vw] sm:left-[10vw] sm:top-[50vh]'>
           <Image
-            src='/pink_circle.png'
-            alt='pink_circle'
+            src={Pink}
+            alt='pink circle'
             width={40}
             height={40}
             className='w-5 h-5 sm:w-10 sm:h-10'
           />
         </div> 
   
-        {/* <div className='absolute right-[9vw] bottom-[13vh] sm:right-[29vw] sm:bottom-[10vh]'>
+        <div className='absolute right-[9vw] bottom-[13vh] sm:right-[29vw] sm:bottom-[35vh]'>
           <Image
-            src='/blue_circle.png'
+            src={Blue}
             alt='blue_circle'
             width={20}
             height={20}
           />
-        </div>  */}
+        </div> 
   
         <div className='text-center'>
           <h2 className='text-3xl font-semibold pb-5'>

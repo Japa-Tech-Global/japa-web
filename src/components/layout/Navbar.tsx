@@ -12,11 +12,11 @@ const Navbar = () => {
   return (
     <nav className='h-fit w-full bg-white flex items-center justify-between px-primary gap-[45px]  py-4 md:py-[26px] sticky top-0 z-20'>
       <Link href='/'>
-        <Image src={JapaLogo} width={200} height={200} alt='Japa Logo' className='lg:w-48 md:w-[500px] sm:w-32'/>
+        <Image src={JapaLogo} width={100} height={100} alt='Japa Logo' className='lg:w-48 md:w-48 sm:w-48'/>
       </Link>
-      <div className='flex-[50%] items-center justify-center gap-[1vw] hidden md:flex text-'>
+      <div className='flex-[50%] items-center justify-center gap-[1vw] hidden md:flex'>
         {navLinks.map((link) => (
-          <Link key={link.href} href={link.href} className='nav-item md:text-sm lg:text-lg  text-[1.5rem]'>
+          <Link key={link.href} href={link.href} className='nav-item md:text-lg lg:text-2xl'>
             {link.label}
           </Link>
         ))}
