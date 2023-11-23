@@ -51,6 +51,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li className='text-lg lg:text-2xl'>
+                <Link href='/cv-revamp' className='hover:text-primary duration-300'>
+                  CV Revamp
+                </Link>
+              </li>
+              <li className='text-lg lg:text-2xl'>
                 <Link href='/community' className='hover:text-primary duration-300'>
                   Community
                 </Link>
