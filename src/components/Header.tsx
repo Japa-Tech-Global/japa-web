@@ -25,7 +25,13 @@ export default function Header({page,auth,userInfo,signOut,menuStatus,setMenuSta
 
         <div className="hidden text-xs font-medium sm:flex gap-7 md:gap-16">
             <Link href='/' className="border-b-2 border-primary">Home</Link>
-            <Link href={ auth ? '/form' : '/login'}>CV Revamp</Link>
+            <select className="border-0 p-0 m-0 focus:border-transparent focus:outline-none">
+              <option value="">            <
+                Link href={ auth ? '/form' : '/login'}>CV Revamp</Link>
+              </option>
+              <option value="" className="">Cv Template</option>
+              <option value="">Others</option>
+            </select>
             <Link href='/jobs'>Jobs</Link>
             <Link href='/courses'>Courses</Link>
             <Link href='/blog'>Blog</Link>
