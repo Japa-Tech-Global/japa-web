@@ -1,16 +1,18 @@
+
 import Link from "next/link";
 import { useState } from "react";
 import { IoMdClose } from 'react-icons/io'
 import { FiMenu } from 'react-icons/fi';
+import JapaLogo from '../assets/shapes/JapaLogo.svg'
+import Image from "next/image";
 
 export default function Header({page,auth,userInfo,signOut,menuStatus,setMenuStatus}){
 
   return(
     <>
       
-      { page !== 'home' ? <header className=' p-7 pb-5'>
+      { page !== 'home' ? <header className=''>
         <h1 className='text-primary text-2xl'>
-          <Link href='/' className='font-extrabold'>JAPA</Link>
         </h1>
       </header> 
       
@@ -19,7 +21,9 @@ export default function Header({page,auth,userInfo,signOut,menuStatus,setMenuSta
       <header className="flex justify-between items-center px-7 py-5">
         <div>
             <h1 className='text-primary text-2xl'>
-              <Link href='/' className='font-extrabold'>JAPA</Link>
+              <Link href='/' className='font-extrabold'>
+                <Image src={JapaLogo} width={100} height={100} alt="Japa Logo "className="" />
+              </Link>
             </h1>
         </div>
 
