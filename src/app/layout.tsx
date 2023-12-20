@@ -5,32 +5,22 @@ import ToastProvider from '@/common/ToastProvider';
 import 'react-toastify/dist/ReactToastify.css';
 import 'reactjs-popup/dist/index.css';
 import { Poppins } from 'next/font/google';
-import Head from "next/head";
-import React, { ReactNode } from "react";
-
-
-interface MainLayoutProps {
-  pageTitle?: string;
-  children: ReactNode;
-}
+import JapaLogo from '../assets/shapes/JapaLogo.svg'
 
 export const metadata: Metadata = {
-  title: 'JAPA',
+  title: '',
   description: 'JAPA Description',
 };
 
 const poppins = Poppins({
-    variable: '--font-primary',
+  variable: '--font-primary',
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
-export default function RootLayout({ pageTitle, children }: MainLayoutProps) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <Head>
-        <title>{pageTitle}</title>
-      </Head>
       <body className={poppins.className}>
         <Providers>
           <ToastProvider>{children}</ToastProvider>
