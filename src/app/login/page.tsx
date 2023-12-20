@@ -75,7 +75,7 @@ export default function LogIn() {
               <Image src={HelloJapa} width={100} height={100} alt='Hello Japa' className='w-full h-1/2'/>
             </div>
 
-          <div className='flex flex-1 flex-col w-1/2'>
+          <div className='flex flex-1 flex-col w-1/2 justify-center items-center lg:items-start'>
             <div className='text-center'>
               <h2 className=' mb-8'>
                 <Image src={JapaLogo} width={150} height={150} alt='JapaLogo' />
