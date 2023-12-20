@@ -7,9 +7,9 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import Swal from 'sweetalert2';
 import { setCookie } from 'cookies-next';
-import Brown from '../../assets/shapes/Brown.svg'
-import Pink from '../../assets/shapes/Pink.svg'
-import Blue from '../../assets/shapes/Blue.svg'
+import HelloJapa from '../../assets/brand/HelloJapa.svg'
+import JapaLogo from '../../assets/shapes/JapaLogo.svg'
+
 
 export default function LogIn() {
   const [email,setEmail] = useState('');
@@ -70,66 +70,42 @@ export default function LogIn() {
   return (
     <>
     <Header page={'login'} auth={undefined} userInfo={undefined} signOut={undefined} menuStatus={undefined} setMenuStatus={undefined}/>
-    <main className=" pt-12 sm:pt-20 flex justify-center items-center flex-col text-txtPrimary">
-        
-        <div className='absolute right-[10vw] top-[7vh] sm:right-[20vw] sm:top-[10vh]'>
-          <Image
-            src={Brown}
-            alt='brown circle'
-            width={90}
-            height={90}
-          />
-        </div> 
-  
-        <div className='absolute left-[2vw] sm:left-[10vw] sm:top-[50vh]'>
-          <Image
-            src={Pink}
-            alt='pink circle'
-            width={40}
-            height={40}
-            className='w-5 h-5 sm:w-10 sm:h-10'
-          />
-        </div> 
-  
-        <div className='absolute right-[9vw] bottom-[13vh] sm:right-[29vw] sm:bottom-[20vh]'>
-          <Image
-            src={Blue}
-            alt='blue_circle'
-            width={20}
-            height={20}
-          />
-        </div> 
-  
-        <div className='text-center'>
-          <h2 className='text-3xl font-semibold pb-5'>
-            Log In
-          </h2>
-          <p className='text-sm w-[234px]'>
-            Are you ready to take the next step towards a succesful future?
-          </p>
-        </div>
-  
-        <form className='pt-2 text-xs w-[80vw] sm:w-[60vw] md:w-[40vw]' onSubmit={(e)=>handleSubmit(e)}>
-          <div className='pt-5'>
-            <p className='text-left pb-1'>Email Address</p>
-            <input className='w-full p-3 border border-txtinput rounded-[5px]' value={email} onChange={(e)=>setEmail(e.target.value)} name='email' type='email' required={true} placeholder='e.g: Samuel John'/>
+    <main className="w-full min-h-full flex justify-center items-center overflow-hidden">
+            <div className='flex-1 h-1/2'  style={{ position: "relative", width: `${100}%`, height: `${50}%` }}>
+              <Image src={HelloJapa} width={100} height={100} alt='Hello Japa' className='w-full h-1/2'/>
+            </div>
+
+          <div className='flex flex-1 flex-col w-1/2 justify-center items-center lg:items-start'>
+            <div className='text-center'>
+              <h2 className=' mb-8'>
+                <Image src={JapaLogo} width={150} height={150} alt='JapaLogo' />
+              </h2>
+              <h2 className='text-2xl font-bold w-[234px] text-left'>
+                Welcome Back!
+              </h2>
+            </div>
+      
+            <form className='pt-2 text-xs w-[80vw] sm:w-[60vw] md:w-[40vw]' onSubmit={(e)=>handleSubmit(e)}>
+              <div className='pt-5'>
+                <p className='text-left pb-1 font-medium'>Email Address</p>
+                <input className='w-full p-3 border border-txtinput rounded-[5px]' value={email} onChange={(e)=>setEmail(e.target.value)} name='email' type='email' required={true} placeholder='e.g: Samuel John'/>
+              </div>
+      
+              <div className='pt-5'>
+                <p className='text-left pb-1 font-medium'>Password</p>
+                <input className='w-full p-3 border border-txtinput rounded-[5px]' value={password} onChange={(e)=>setPassword(e.target.value)} name='password' type='password' required={true} placeholder='Your Password'/>
+                <p className='text-right pt-1'><Link href='#' className='text-primary font-medium mb-2'>Forgot Password?</Link></p>
+              </div>
+      
+              <button className={`bg-primary text-white w-full mt-5 py-3 rounded-[5px] px-4 font-semibold ${loading && 'opacity-30'}`} disabled={loading ? true : false}>Log In</button>
+      
+            </form>
+      
+      
+            <div className='text-xs pt-8'>
+              <p>Don&apos;t have an account? <Link className='text-primary font-medium' href='/register'>Sign Up</Link></p>
+            </div>
           </div>
-  
-          <div className='pt-5'>
-            <p className='text-left pb-1'>Password</p>
-            <input className='w-full p-3 border border-txtinput rounded-[5px]' value={password} onChange={(e)=>setPassword(e.target.value)} name='password' type='password' required={true} placeholder='Your Password'/>
-            <p className='text-right pt-1'><Link href='#' className='text-primary font-medium'>Forgot Password?</Link></p>
-          </div>
-  
-          <button className={`bg-primary text-white w-full mt-5 py-3 rounded-[5px] px-4 font-semibold ${loading && 'opacity-30'}`} disabled={loading ? true : false}>Log In</button>
-  
-        </form>
-  
-  
-        <div className='text-xs pt-16'>
-          <p>Don&apos;t have an account? <Link className='text-primary font-medium' href='/register'>Sign Up</Link></p>
-        </div>
-  
       </main>
     </>
   )
