@@ -5,10 +5,9 @@ import ToastProvider from '@/common/ToastProvider';
 import 'react-toastify/dist/ReactToastify.css';
 import 'reactjs-popup/dist/index.css';
 import { Poppins } from 'next/font/google';
-import JapaLogo from '../assets/shapes/JapaLogo.svg'
 
 export const metadata: Metadata = {
-  title: '',
+  title: "Japa Talent",
   description: 'JAPA Description',
 };
 
