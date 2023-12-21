@@ -8,7 +8,7 @@ import { Poppins } from 'next/font/google';
 
 export const metadata: Metadata = {
   icons:{
-    icon: "../assets/shapes/JapaLogo.svg",
+    icon: "../app/favicon.ico",
   },
   description: 'JAPA Description',
 };
