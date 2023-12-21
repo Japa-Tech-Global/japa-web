@@ -7,7 +7,9 @@ import 'reactjs-popup/dist/index.css';
 import { Poppins } from 'next/font/google';
 
 export const metadata: Metadata = {
-  title: "Japa Talent",
+  icons:{
+    icon: "../assets/shapes/JapaLogo.svg",
+  },
   description: 'JAPA Description',
 };
 
