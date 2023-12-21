@@ -7,6 +7,9 @@ import 'reactjs-popup/dist/index.css';
 import { Poppins } from 'next/font/google';
 
 export const metadata: Metadata = {
+  icons:{
+    icon: "../app/favicon.ico"
+  },
   description: 'JAPA Description',
 };
 
