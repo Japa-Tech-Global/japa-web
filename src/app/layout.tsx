@@ -5,8 +5,8 @@ import ToastProvider from '@/common/ToastProvider';
 import 'react-toastify/dist/ReactToastify.css';
 import 'reactjs-popup/dist/index.css';
 import { Poppins } from 'next/font/google';
-
 export const metadata: Metadata = {
+  title:'Japa | open to work',
   icons:{
     icon: "../app/favicon.ico"
   },
