@@ -70,9 +70,9 @@ export default function LogIn() {
   return (
     <>
     <Header page={'login'} auth={undefined} userInfo={undefined} signOut={undefined} menuStatus={undefined} setMenuStatus={undefined}/>
-    <main className="w-screen h-screen flex gap-16 justify-center items-center overflow-hidden">
-            <div className='flex-1'>
-              <Image src={HelloJapa} width={100} height={100} alt='Hello Japa' className='w-full h-full object-cover'/>
+    <main className="w-screen h-screen flex gap-gap-16 bg-[#f3f4f6] justify-center items-center overflow-hidden">
+            <div className='flex-1 w-full h-full'>
+              <Image src={HelloJapa} width={1000} height={1000} alt='Hello Japa' className='w-full h-full object-cover'/>
             </div>
 
           <div className='flex flex-1 flex-col justify-center items-center lg:items-start'>
