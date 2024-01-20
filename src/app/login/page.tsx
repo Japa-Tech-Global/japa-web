@@ -70,15 +70,15 @@ export default function LogIn() {
   return (
     <>
     <Header page={'login'} auth={undefined} userInfo={undefined} signOut={undefined} menuStatus={undefined} setMenuStatus={undefined}/>
-    <main className="w-full min-h-full flex justify-center items-center overflow-hidden">
-            <div className='flex-1 h-1/2'  style={{ position: "relative", width: `${100}%`, height: `${50}%` }}>
-              <Image src={HelloJapa} width={100} height={100} alt='Hello Japa' className='w-full h-1/2'/>
+    <main className="w-screen h-screen flex gap-16 justify-center items-center overflow-hidden">
+            <div className='flex-1'>
+              <Image src={HelloJapa} width={100} height={100} alt='Hello Japa' className='w-full h-full object-cover'/>
             </div>
 
-          <div className='flex flex-1 flex-col w-1/2 justify-center items-center lg:items-start'>
+          <div className='flex flex-1 flex-col justify-center items-center lg:items-start'>
             <div className='text-center'>
               <h2 className=' mb-8'>
-                <Image src={JapaLogo} width={150} height={150} alt='JapaLogo' />
+                <Image src={JapaLogo} width={150} height={150} alt='JapaLogo'/>
               </h2>
               <h2 className='text-2xl font-bold w-[234px] text-left'>
                 Welcome Back!
