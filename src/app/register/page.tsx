@@ -96,7 +96,7 @@ export default function SignUp() {
   return (
     <>
     <Header page={'register'} auth={undefined} userInfo={undefined} signOut={undefined} menuStatus={undefined} setMenuStatus={undefined}/>
-      <main className="w-screen h-screen flex items-center text-txtPrimary gap-8 bg-[#f3f4f6] overflow-hidden">
+      <main className="w-screen h-screen flex items-center text-txtPrimary gap-16 bg-[#f3f4f6] overflow-hidden">
         
         <div className='h-screen w-full  flex-1 relative'>
                 <Image src={HelloJapa} width={1000} height={1000} alt='Hello Japa' className='w-full object-cover h-full'/>
