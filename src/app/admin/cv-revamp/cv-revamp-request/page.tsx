@@ -1,4 +1,5 @@
 import { FilterForm } from "./Component/FilterForm/FilterForm";
+import PaginationComponent from "./Component/Pagination/PaginationComponent";
 import SearchForm from "./Component/SearchForm/SearchForm";
 import { SortForm } from "./Component/SortForm/SortForm";
 import { TabComponent } from "./Component/TabComponent/TabComponent";
@@ -15,6 +16,9 @@ const CvRevampRequest = () => {
       </div>
       <div className="mt-8">
         <TabComponent />
+      </div>
+      <div className="flex justify-end mt-5">
+        <PaginationComponent />
       </div>
     </div>
   );

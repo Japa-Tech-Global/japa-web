@@ -39,7 +39,9 @@ const TableComponent = () => {
       <Table hoverable>
         <TableHead className="bg-[#F7F2F7]">
           {tableHeads.map((tableHead, index) => (
-            <TableHeadCell key={index}>{tableHead}</TableHeadCell>
+            <TableHeadCell key={index} className="bg-[#F7F2F7] h-12">
+              {tableHead}
+            </TableHeadCell>
           ))}
           <TableHeadCell>
             <span className="sr-only">View</span>
