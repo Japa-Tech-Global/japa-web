@@ -17,18 +17,19 @@
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.14",
     "axios": "^1.4.0",
-    "classnames": "^2.3.2",
+    "classnames": "^2.5.1",
     "cookies-next": "^4.0.0",
     "crypto-js": "^4.1.1",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.12",
+    "flowbite-react": "^0.7.2",
     "formik": "^2.4.2",
     "next": "^13.4.12",
     "postcss": "8.4.27",
     "react": "18.2.0",
     "react-click-away-listener": "^2.2.3",
     "react-dom": "18.2.0",
-    "react-icons": "^4.11.0",
+    "react-icons": "^4.12.0",
     "react-modal": "^3.16.1",
     "react-phone-input-2": "^2.15.1",
     "react-redux": "^8.1.2",
@@ -42,5 +43,9 @@
     "yarn": "^1.22.19",
     "yup": "^1.2.0",
     "yup-password": "^0.2.2"
+  },
+  "devDependencies": {
+    "daisyui": "^4.6.2",
+    "dotenv": "^16.4.1"
   }
 }
