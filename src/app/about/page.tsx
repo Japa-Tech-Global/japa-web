@@ -4,6 +4,7 @@ import React from 'react';
 import whatsappImage from '@/assets/icons/about/whatsapp.svg';
 import telegramImage from '@/assets/icons/about/telegram.svg';
 
+
 const AboutPage = () => {
   return (
     <AppLayout>

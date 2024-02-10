@@ -1,4 +1,10 @@
-const Users = [
+interface UserProps {
+  id:number,
+  name:string,
+  key:string,
+}
+
+const Users:UserProps[] = [
   {
     "id": 1,
     "name": "Name",
