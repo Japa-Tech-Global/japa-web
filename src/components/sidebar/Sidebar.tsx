@@ -21,8 +21,6 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { IoIosHelpCircleOutline } from "react-icons/io";
 import { RxCaretDown } from "react-icons/rx";
 
-
-
 export function Sidebar() {
   const [open, setOpen] = useState(false);
 
@@ -34,7 +32,7 @@ export function Sidebar() {
   };
   return (
     <aside
-      className={`absolute left-0 top-0 z-50 flex h-screen w-[18rem] flex-col overflow-y-hidden bg-[#f5f5f5] duration-300 ease-linear ${
+      className={`absolute left-0 top-0 z-50 flex h-screen w-[18rem] flex-col overflow-y-hidden bg-white border border-1 duration-300 ease-linear ${
         currtState ? "w-[18rem]" : "w-[80px]"
       } `}
     >
@@ -83,7 +81,6 @@ export function Sidebar() {
                   >
                     Job Posting
                     <RxCaretDown size={15} />
-
                   </div>
                 </div>
                 <ul className="flex flex-col gap-4 text-left text-sm">
@@ -131,17 +128,17 @@ export function Sidebar() {
                 Companies
               </div>
             </li>
-          <hr />
+            <hr />
           </ul>
           <ul className="mb-16 flex flex-col gap-2">
             <li className="relative flex items-center gap-4 text-[20px] mb-8">
-            <IoSettingsOutline size={30}/>
+              <IoSettingsOutline size={30} />
               <div className={` ${currtState ? "w-full" : "hidden"}`}>
                 Settings
               </div>
             </li>
             <li className="relative flex items-center gap-4 text-[20px] mb-8">
-            <IoIosHelpCircleOutline size={30}/>
+              <IoIosHelpCircleOutline size={30} />
 
               <div className={` ${currtState ? "w-full" : "hidden"}`}>Help</div>
             </li>
