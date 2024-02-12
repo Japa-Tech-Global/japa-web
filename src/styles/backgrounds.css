@@ -46,3 +46,10 @@
   background-size: cover;
   background-position: center;
 }
+.hero-bg-img {
+  background-image: url('../assets/backgrounds/onboarding-hero.png');
+  height: 50vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

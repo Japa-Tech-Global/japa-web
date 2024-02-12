@@ -23,16 +23,21 @@ import { RxCaretDown } from "react-icons/rx";
 
 export function Sidebar() {
   const [open, setOpen] = useState(false);
-
+  const [active, setActive] = useState(false);
   const currtState = useSide();
   const updateedState = useSideUpdate();
 
   const togleMenu = () => {
     setOpen(!open);
   };
+
+  const activeNav = () => {
+    setActive(true);
+  };
+
   return (
     <aside
-      className={`absolute left-0 top-0 z-50 flex h-screen w-[18rem] flex-col overflow-y-hidden bg-white border border-1 duration-300 ease-linear ${
+      className={`absolute left-0 top-0 z-50 flex h-screen  flex-col overflow-y-hidden bg-white border border-1 duration-300 ease-linear ${
         currtState ? "w-[18rem]" : "w-[80px]"
       } `}
     >
@@ -59,15 +64,13 @@ export function Sidebar() {
       >
         <nav className={`mt-5 py-4 px-4 lg:mt-9 lg:px-6`}>
           <ul className="mb-16 flex flex-col gap-2">
-            <li className="relative flex items-center gap-4 text-[20px] mb-8">
-              <MdOutlineDashboardCustomize size={30} />
-              <div
-                className={` ${currtState ? "w-full" : "hidden"} text-[20px]`}
-              >
+            <li className="relative flex items-center gap-4 mb-5 hover:bg-[#F2EAFD]  py-2 rounded-r-full">
+              <MdOutlineDashboardCustomize size={25} />
+              <div className={` ${currtState ? "w-full" : "hidden"} text-md`}>
                 Dashboard
               </div>
             </li>
-            <li className="relative flex items-center gap-4 text-[20px] mb-8">
+            <li className="relative flex items-center gap-4  mb-5 hover:bg-[#F2EAFD] py-2 rounded-r-full ">
               <button
                 onClick={togleMenu}
                 className="flex flex-col gap-2 items-center"
@@ -76,7 +79,7 @@ export function Sidebar() {
                   <GoBriefcase size={25} />
                   <div
                     className={`flex gap-2 items-center ${
-                      currtState ? "w-full" : "hidden"
+                      currtState ? "w-full" : "hidden text-md"
                     }`}
                   >
                     Job Posting
@@ -87,7 +90,7 @@ export function Sidebar() {
                   {open && (
                     <>
                       <li className="flex items-center gap-2">
-                        <CgAddR siz />
+                        <CgAddR />
                         Post New Job
                       </li>
                       <li className="flex items-center gap-2">
@@ -103,44 +106,51 @@ export function Sidebar() {
                 </ul>
               </button>
             </li>
-            <li className="relative flex items-center gap-4 text-[20px] mb-8">
-              <FiUser size={30} />
-              <div className={` ${currtState ? "w-full" : "hidden"}`}>
+            <li className="relative flex items-center gap-4  mb-5 hover:bg-[#F2EAFD] py-2 rounded-r-full ">
+              <FiUser size={25} />
+              <div className={` ${currtState ? "w-full" : "hidden"} text-md`}>
                 users
               </div>
             </li>
-            <li className="relative flex items-center gap-4 text-[20px] mb-8">
-              <SlNote size={25} />
-              <div className={` ${currtState ? "w-full" : "hidden"}`}>
-                Cv Revamp
-              </div>
-            </li>
-            <li className="relative flex items-center gap-4 text-[20px] mb-8">
-              <GrUserAdmin size={30} />
+            <Link href={"/dashboard/cv-revamp/cv-revamp-request/"}>
+              <li className="relative flex items-center gap-4  mb-5 hover:bg-[#F2EAFD] py-2  rounded-r-full">
+                <SlNote size={25} />
+                <div className={` ${currtState ? "w-full" : "hidden"} text-md`}>
+                  Cv Revamp
+                </div>
+              </li>
+            </Link>
+            <li className="relative flex items-center gap-4 mb-5 hover:bg-[#F2EAFD] py-2 rounded-r-full">
+              <GrUserAdmin size={25} />
 
-              <div className={` ${currtState ? "w-full" : "hidden"}`}>
+              <div className={` ${currtState ? "w-full" : "hidden"} text-md`}>
                 Admins
               </div>
             </li>
-            <li className="relative flex items-center gap-4 text-[20px] mb-8">
-              <HiOutlineBuildingLibrary size={30} />
-              <div className={` ${currtState ? "w-full" : "hidden"}`}>
+            <li className="relative flex items-center gap-4  mb-5 hover:bg-[#F2EAFD] py-2 rounded-r-full">
+              <HiOutlineBuildingLibrary size={25} />
+              <div className={` ${currtState ? "w-full" : "hidden"} text-md`}>
                 Companies
               </div>
             </li>
             <hr />
           </ul>
           <ul className="mb-16 flex flex-col gap-2">
-            <li className="relative flex items-center gap-4 text-[20px] mb-8">
-              <IoSettingsOutline size={30} />
-              <div className={` ${currtState ? "w-full" : "hidden"}`}>
-                Settings
-              </div>
-            </li>
-            <li className="relative flex items-center gap-4 text-[20px] mb-8">
-              <IoIosHelpCircleOutline size={30} />
+            <Link href="/dashboard/settings">
+              <li className="relative flex items-center gap-4 mb-5 hover:bg-[#F2EAFD] py-2 rounded-r-full">
+                <IoSettingsOutline size={25} />
+                <div className={` ${currtState ? "w-full" : "hidden"} text-md`}>
+                  Settings
+                </div>
+              </li>
+            </Link>
 
-              <div className={` ${currtState ? "w-full" : "hidden"}`}>Help</div>
+            <li className="relative flex items-center gap-4  mb-5 hover:bg-[#F2EAFD] py-2 rounded-r-full">
+              <IoIosHelpCircleOutline size={25} />
+
+              <div className={` ${currtState ? "w-full" : "hidden"} text-md`}>
+                Help
+              </div>
             </li>
           </ul>
         </nav>

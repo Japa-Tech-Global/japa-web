@@ -4,13 +4,11 @@ import PaginationComponent from "./Component/Pagination/PaginationComponent";
 import SearchForm from "./Component/SearchForm/SearchForm";
 import { SortForm } from "./Component/SortForm/SortForm";
 import { TabComponent } from "./Component/TabComponent/TabComponent";
-import { SideProvider } from "@/components/Sidebar/SideContext";
-// import { Tab } from "./Component/TabComponent/TabComponent";
 
 const CvRevampRequest = () => {
   return (
     <div>
-      <div className="px-20 h-[30rem] pt-[4rem] flex-grow bg-white">
+      <div className=" h-[30rem] pt-[4rem] flex-grow bg-white">
         <p className="font-bold text-3xl">CV Revamp Request</p>
         <div className="mt-6 flex">
           <SearchForm />

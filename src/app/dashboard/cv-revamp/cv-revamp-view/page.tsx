@@ -27,7 +27,7 @@ const packagePlans = [
 const CVRevampView: FC<PackageProps> = () => {
   return (
     <div>
-      <div className="flex justify-between border-b items-center py-10 px-[2rem]">
+      <div className="flex justify-between border-b items-center py-10">
         <div className="flex gap-4 items-center">
           <div className="bg-[#FFDDD2] rounded-full p-4">RF</div>
           <p className="text-2xl font-bold">Robert Fox</p>
