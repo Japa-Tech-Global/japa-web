@@ -6,6 +6,7 @@ import {
   TableHeadCell,
   TableRow,
 } from "flowbite-react";
+import Link from "next/link";
 
 const tableHeads = ["Name", "Plan", "Location", "Email", "Date Created"];
 
@@ -62,12 +63,12 @@ const TableComponent = () => {
               <TableCell>{tableContent.tableEmail}</TableCell>
               <TableCell>{tableContent.dateCreated}</TableCell>
               <TableCell>
-                <a
-                  href="#"
+                <Link
+                  href="/dashboard/cv-revamp/cv-revamp-view"
                   className="font-medium text-[#7D30EE] hover:underline"
                 >
                   View
-                </a>
+                </Link>
               </TableCell>
             </TableRow>
           ))}
