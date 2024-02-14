@@ -4,7 +4,7 @@ import Button from '../Button/Button';
 
 const GetStartedButton = () => {
   return (
-    <a href={'/dashboard'} >
+    <a href={'/onboarding'} >
       <Button className='!h-[76px] !w-[200px]'>Get started</Button>
     </a>
   );

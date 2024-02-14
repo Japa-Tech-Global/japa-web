@@ -53,3 +53,17 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+.bg-carousel-1 {
+  background-image: url('../assets/backgrounds/laptop.png');
+  height: 20vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg-carousel-2 {
+  background-image: url('../assets/backgrounds/question.png');
+  height: 20vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

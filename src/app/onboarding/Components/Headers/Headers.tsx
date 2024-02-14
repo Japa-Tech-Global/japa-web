@@ -26,7 +26,7 @@ const Header = () => {
         <div className="flex-start">
           <p className="text-[#7D30EE] font-bold">JAPA</p>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-20">
           {navItems.map((navlink, index) => (
             <Link href={navlink.link} key={index}>
               <p className="hover:text-[#7D30EE] transition-all ease-linear">
