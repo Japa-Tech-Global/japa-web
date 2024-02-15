@@ -1,11 +1,17 @@
-export const Inputs = ({ label, type, placeholder }) => {
+interface InputProps {
+  label?: string;
+  type: string;
+  placeholder: string;
+}
+
+export const Inputs = ({ label, type, placeholder }: InputProps) => {
   return (
     <div>
       <label className="text-white">{label}</label>
       <input
         type={type}
         placeholder={placeholder}
-        className="border-none w-full bg-white rounded-md py-3"
+        className="border-slate-200 w-full bg-white rounded-md py-3"
       />
     </div>
   );
