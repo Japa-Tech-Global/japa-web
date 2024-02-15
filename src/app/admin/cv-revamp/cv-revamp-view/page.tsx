@@ -1,12 +1,12 @@
-// import Badge from "@/components/Badge/Badge";
+import React, { FC } from "react";
 import { IoCheckmark } from "react-icons/io5";
-import { FC } from "react";
 
 interface PackageProps {
   id: number;
   label: string;
 }
-const packagePlans = [
+
+const packagePlans: PackageProps[] = [
   {
     id: 1,
     label: "Written to fit the Preferred Job",
@@ -20,18 +20,17 @@ const packagePlans = [
     label: "keyword Optimization",
   },
   {
-    id: 1,
+    id: 4,
     label: "ATS scanning",
   },
 ];
-const CVRevampView: FC<PackageProps> = () => {
+const CVRevampView: FC = () => {
   return (
     <div>
       <div className="flex justify-between border-b items-center py-10">
         <div className="flex gap-4 items-center">
           <div className="bg-[#FFDDD2] rounded-full p-4">RF</div>
           <p className="text-2xl font-bold">Robert Fox</p>
-          {/* <Badge>Pending</Badge> */}
         </div>
         <div>
           <button className="bg-[#7d30ee] rounded-lg text-white px-3 py-2">

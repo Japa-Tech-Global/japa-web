@@ -23,13 +23,14 @@ const Hero = () => {
         height: "70vh",
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        filter: 'brightness(80%) contrast(120%)',
       }}
     >
         <div className="flex flex-col justify-center items-center">
           <h1 className="font-md text-4xl text-white mb-8">Find your dream job!</h1>
           <div className="hero-bg-img md:flex justify-center items-center gap-3 px-20 md:px-0 py-8 md:py-0">
-            <Inputs placeholder="Name of Role" label="Role" type="text" />
+            <Inputs placeholder="    Name of Role" label="Role" type="text" />
             <Select label={"Field"} defaultValue={"Job Category"} />
             <Select label={"Location"} defaultValue={"Onsite/Remote"} />
             <div className="mt-6">
