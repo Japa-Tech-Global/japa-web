@@ -23,7 +23,7 @@ const packagePlans: PackageProps[] = [
     label: "ATS scanning",
   },
 ];
-const CVRevampView: React.FC<PackageProps> = () => {
+const CVRevampView = () => {
   return (
     <div>
       <div className="flex justify-between border-b items-center py-10">

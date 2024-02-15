@@ -11,15 +11,15 @@ import HelloJapa from "../../assets/brand/HelloJapa.svg";
 import JapaLogo from "../../assets/shapes/JapaLogo.svg";
 import { NextPage } from "next";
 
-interface LoginProps {
-  email:string,
-  password:string,
-  loading:boolean,
-}
-const LogIn:NextPage<LoginProps> = ():ReactElement => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false);
+// interface LoginProps {
+//   // email:any,
+//   password:string,
+//   loading:boolean,
+// }
+const LogIn = ():ReactElement => {
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
   const router = useRouter();
 
   const Toast = Swal.mixin({
