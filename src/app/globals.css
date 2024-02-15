@@ -1,6 +1,6 @@
 @import url("../styles/backgrounds.css");
 @import url("../styles/table.css");
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -22,6 +22,7 @@ body {
   font-size: 16px;
   color: var(--black);
   scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Input styles */

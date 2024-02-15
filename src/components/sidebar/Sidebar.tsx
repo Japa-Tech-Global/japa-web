@@ -1,34 +1,36 @@
-"use client"
+"use client";
 
-import { FaArrowLeftLong } from "react-icons/fa6";
-import { RiDashboardFill } from "react-icons/ri";
-import { FaToolbox } from "react-icons/fa";
-import { LuUserSquare } from "react-icons/lu";
-import { PiHouseLineFill } from "react-icons/pi";
-import { RiAdminFill } from "react-icons/ri";
-import { GrOrganization } from "react-icons/gr";
-import { IoIosSettings } from "react-icons/io";
-import { IoIosHelpCircle } from "react-icons/io";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import { CgAddR } from "react-icons/cg";
 import { TiShoppingBag } from "react-icons/ti";
 import { TfiWrite } from "react-icons/tfi";
-import { FaArrowRightLong } from "react-icons/fa6";
-import JapaLoogo from '../../assets/shapes/JapaLogo.svg'
-
+import JapaLoogo from "../../assets/shapes/JapaLogo.svg";
 import Link from "next/link";
 import Image from "next/image";
-import { useSide, useSideUpdate } from '../../components/sidebar/SideContext'
+import { useSide, useSideUpdate } from "./SideContext";
 import { useState } from "react";
+import { IoMdClose } from "react-icons/io";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { MdOutlineDashboardCustomize } from "react-icons/md";
+import { GoBriefcase } from "react-icons/go";
+import { FiUser } from "react-icons/fi";
+import { SlNote } from "react-icons/sl";
+import { GrUserAdmin } from "react-icons/gr";
+import { HiOutlineBuildingLibrary } from "react-icons/hi2";
+import { IoSettingsOutline } from "react-icons/io5";
+import { IoIosHelpCircleOutline } from "react-icons/io";
+import { RxCaretDown } from "react-icons/rx";
+
 
 
 
 export function Sidebar() {
     const [open, setOpen] = useState(false)
 
-    const currtState = useSide()
-    const updateedState =  useSideUpdate()
 
+
+export function Sidebar() {
+  const [open, setOpen] = useState(false);
 
     const togleMenu = () => {
         setOpen(!open)
@@ -43,19 +45,8 @@ export function Sidebar() {
             />
         </Link>
 
-        <button 
-            onClick={updateedState} 
-            className="p-2 rounded-lg bg-gray-500"
-        >
-            { currtState ? (
-                <FaArrowLeftLong color={'lightgray'} size={'1.3rem'} />
-
-                ) : (
-                        <FaArrowRightLong color={'lightgray'}  size={'1.2rem'} />
-                )
-            }
-
-
+        <button onClick={updateedState} className="p-2 rounded-lg ">
+          {currtState ? <IoMdClose /> : <RxHamburgerMenu />}
         </button>
      </nav>
      <div className={`flex flex-col items-center duration-300 ease-linear cursor-pointer overflow-y-hidden`}>
@@ -144,5 +135,5 @@ export function Sidebar() {
                     </nav>
                 </div>
     </aside>
-  )
+  );
 }
