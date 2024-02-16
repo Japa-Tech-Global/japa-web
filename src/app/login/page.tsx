@@ -16,7 +16,7 @@ import { NextPage } from "next";
 //   password:string,
 //   loading:boolean,
 // }
-const LogIn = ():ReactElement => {
+const LogIn = (): ReactElement => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
@@ -35,11 +35,11 @@ const LogIn = ():ReactElement => {
     // className:'w-[100px]'
   });
   // Mikeidowu1.
-  function handleSubmit(e:SyntheticEvent) {
+  function handleSubmit(e: SyntheticEvent) {
     e.preventDefault();
     setLoading(true);
     axios
-      .post("", {
+      .post("http://[::1]:3000/api/v1/auth/login", {
         email: email,
         password: password,
       })
@@ -95,8 +95,8 @@ const LogIn = ():ReactElement => {
         menuStatus={undefined}
         setMenuStatus={undefined}
       />
-      <main className="w-screen h-screen flex gap-gap-16 bg-[#f3f4f6] justify-center items-center overflow-hidden">
-        <div className="flex-1 w-full h-full">
+      <main className="grid lg:grid-cols-2 h-screen gap-16 w-full">
+        <div className="lg:flex-1 w-full h-full hidden lg:flex">
           <Image
             src={HelloJapa}
             width={1000}
@@ -173,5 +173,5 @@ const LogIn = ():ReactElement => {
       </main>
     </>
   );
-}
+};
 export default LogIn;

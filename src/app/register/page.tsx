@@ -66,7 +66,7 @@ export default function SignUp() {
     e.preventDefault();
     if(validEmail && validpassword && phone_number.length === 13){
       setLoading(true);
-      axios.post('https://nice-story-production.up.railway.app/api/v1/auth/register',{
+      axios.post('http://[::1]:3000/api/v1/auth/register',{
         firstName:first_name,
         lastName:last_name,
         email:email,
