@@ -21,7 +21,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { IoIosHelpCircleOutline } from "react-icons/io";
 import { RxCaretDown } from "react-icons/rx";
 
-export function Sidebar() {
+const Sidebar = () =>  {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(false);
   const currtState = useSide();
@@ -158,3 +158,4 @@ export function Sidebar() {
     </aside>
   );
 }
+export default Sidebar
