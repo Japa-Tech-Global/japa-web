@@ -1,5 +1,6 @@
 // @ts-nocheck
 "use client";
+import { useState } from "react";
 import React from "react";
 import Input from "./input";
 import Image from "next/image";

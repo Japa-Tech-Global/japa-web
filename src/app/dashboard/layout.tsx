@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import { SideProvider } from "@/components/Sidebar/SideContext";
-import { Sidebar } from "@/components/Sidebar/Sidebar";
+import { SideProvider } from "../../components/Sidebar/SideContext";
+import  Sidebar  from "../../components/Sidebar/Sidebar";
 
 const DashboardLayout = ({ children }: { children: ReactNode }) => {
   return (

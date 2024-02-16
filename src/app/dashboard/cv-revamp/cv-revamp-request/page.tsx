@@ -1,4 +1,4 @@
-import { Sidebar } from "@/components/Sidebar/Sidebar";
+import  Sidebar  from "@/components/Sidebar/Sidebar";
 import { FilterForm } from "./Component/FilterForm/FilterForm";
 import PaginationComponent from "./Component/Pagination/PaginationComponent";
 import SearchForm from "./Component/SearchForm/SearchForm";
