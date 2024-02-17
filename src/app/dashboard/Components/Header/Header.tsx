@@ -4,7 +4,7 @@ import { RxCaretDown } from "react-icons/rx";
 
 const Header = () => {
   return (
-    <div className="border-b border-grey-200 h-[5rem] shadow-sm fixed w-full top-0 ">
+    <div className="border-b border-grey-200 h-[5rem] shadow-sm fixed w-full top-0 z-auto bg-white ">
       <div className="flex justify-end items-center gap-4 pl-[18.2rem] py-6 pr-[2rem]">
         <FaBell className="text-black text-xl" />
         <div className="flex gap-2 items-center">

@@ -37,7 +37,7 @@ const Sidebar = () =>  {
 
   return (
     <aside
-      className={`absolute left-0 top-0 z-50 flex h-screen  flex-col overflow-y-hidden bg-white border border-1 duration-300 ease-linear ${
+      className={` left-0 top-0 z-50 flex fixed  flex-col overflow-y-hidden bg-white border border-1 duration-300 ease-linear ${
         currtState ? "w-[18rem]" : "w-[80px]"
       } `}
     >
