@@ -5,6 +5,7 @@ import RadioInputs from "../Components/JobForms/RadioInputs/RadioInputs";
 import Select from "../Components/JobForms/SelectForm/Select";
 import { messageData } from "../Components/JobForms/MessageForms/messageboxData";
 import Button from "@/app/onboarding/Components/Button/Button";
+import Link from "next/link";
 
 const radioData = ["Full time", "Part time", "Intern", "Volunteer", "Others"];
 const JobPosting = () => {
@@ -83,7 +84,11 @@ const JobPosting = () => {
             <button className="bg-transparent text-[#7D30EE] underline">
               Save for later
             </button>
-            <Button>Preview</Button>
+            <Button>
+              <Link href={"/dashboard/job-posting/preview-job-posting"}>
+                Preview
+              </Link>
+            </Button>
           </div>
         </div>
       </div>
