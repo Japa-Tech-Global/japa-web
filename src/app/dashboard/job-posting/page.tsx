@@ -6,6 +6,7 @@ import Select from "../Components/JobForms/SelectForm/Select";
 import { messageData } from "../Components/JobForms/MessageForms/messageboxData";
 import Button from "@/app/onboarding/Components/Button/Button";
 import Link from "next/link";
+import { useState } from "react";
 
 const radioData = ["Full time", "Part time", "Intern", "Volunteer", "Others"];
 const JobPosting = () => {
@@ -13,6 +14,7 @@ const JobPosting = () => {
     // Handle the form data here, you can log it or update the state in the parent component
     console.log(formData);
   };
+  const [items, setItems] = useState("");
   return (
     <div>
       <div>
@@ -41,7 +43,13 @@ const JobPosting = () => {
             </div>
           </div>
           <div>
-            <Select label="Location" placeholder="Select the company country" />
+            <Select
+              label="Location"
+              placeholder="Select the company country"
+              value={items}
+              onChange={(newValue) => setItems(newValue)}
+              options={["items 1", "items 2", "items 3"]}
+            />
             <div className="mt-4">
               <InputForms
                 onInputChange={handleInputChange}
